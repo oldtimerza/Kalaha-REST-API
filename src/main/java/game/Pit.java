@@ -9,6 +9,8 @@ public class Pit {
 
     private List<Stone> stones;
 
+    private int number;
+
     private Pit nextPit;
 
     public Player getOwner() {
@@ -23,13 +25,18 @@ public class Pit {
         return nextPit;
     }
 
+    public int getNumber() {
+        return number;
+    }
+
     public void setNextPit(Pit nextPit) {
         this.nextPit = nextPit;
     }
 
-    public Pit(List<Stone> stones, Player player){
+    public Pit(List<Stone> stones, Player player, int number){
         this.stones = stones;
         this.owner = player;
+        this.number = number;
     }
 
     public void addStones(List<Stone> stones){

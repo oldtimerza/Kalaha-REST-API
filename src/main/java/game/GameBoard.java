@@ -25,13 +25,27 @@ public class GameBoard {
         return pits;
     }
 
-    public GameBoard makeMove(Player player, Move move){
+    public List<Move> getMoves(){
+        return this.moves;
+    }
+
+    public GameBoard makeMove(Player player, Move move) throws NotPlayersTurnException {
+        if(!player.equals(gameState.currentPlayer)){
+           throw new NotPlayersTurnException();
+        }
        moves.add(move);
        move.execute(player, this);
        return this;
     }
 
     public void Sow(Player player, int pitNumber){
-
+        Pit pit = this.pits.get(pitNumber - 1);
+        List<Stone> stones = pit.removeStones();
+        for(Stone stone : stones){
+           pit = pit.getNextPit();
+           List<Stone> stonesToAdd = new ArrayList<>();
+           stonesToAdd.add(stone);
+           pit.addStones(stonesToAdd);
+        }
     }
 }

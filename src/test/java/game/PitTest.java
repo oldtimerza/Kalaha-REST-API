@@ -13,7 +13,7 @@ public class PitTest {
     public void shouldAddStoneToListOfStones(){
         List<Stone> stones = new ArrayList<>();
         Player player = new Player();
-        Pit pit = new Pit(stones, player);
+        Pit pit = new Pit(stones, player, 0);
         List<Stone> stonesToInsert = new ArrayList<>();
         stonesToInsert.add(new Stone());
         pit.addStones(stonesToInsert);
@@ -27,7 +27,7 @@ public class PitTest {
         stones.add(new Stone());
         stones.add(new Stone());
         Player player = new Player();
-        Pit pit = new Pit(stones, player);
+        Pit pit = new Pit(stones, player, 0);
 
         List<Stone> actualStones = pit.removeStones();
         Assert.assertThat(pit.getStones().size(), equalTo(0));
