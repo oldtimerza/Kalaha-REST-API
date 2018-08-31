@@ -1,9 +1,6 @@
 package game.moves;
 
-import game.GameBoard;
-import game.Pit;
-import game.Player;
-import game.Stone;
+import game.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +17,7 @@ public class DropStone implements Move {
     }
 
     @Override
-    public void execute(Player player, GameBoard gameBoard) {
+    public void execute(Player player, Game game) {
         List<Stone> stones = new ArrayList<>();
         stones.add(stone);
         pit.addStones(stones);

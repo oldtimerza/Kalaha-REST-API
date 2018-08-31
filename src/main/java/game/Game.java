@@ -26,11 +26,13 @@ public class Game {
             throw new NotPlayersTurnException();
         }
         moves.add(move);
-        move.execute(player, gameBoard);
+        move.execute(player, this);
         return this;
     }
 
     public List<Move> getMoves(){
         return this.moves;
     }
+
+    public GameBoard getGameBoard(){return gameBoard;}
 }

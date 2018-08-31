@@ -1,18 +1,18 @@
 package game.rules;
 
-import game.GameBoard;
+import game.Game;
 import game.Player;
 import game.moves.Move;
 
 public abstract class Affirmation {
     protected Move move;
     protected Player player;
-    protected GameBoard gameBoard;
+    protected Game game;
 
-    public Affirmation(Move move, Player player, GameBoard gameBoard) {
+    public Affirmation(Move move, Player player, Game game) {
         this.move = move;
         this.player = player;
-        this.gameBoard = gameBoard;
+        this.game = game;
     }
 
     public abstract boolean ok();

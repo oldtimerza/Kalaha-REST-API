@@ -1,15 +1,9 @@
 package game.moves;
 
-import game.GameBoard;
-import game.Pit;
-import game.Player;
-import game.Stone;
+import game.*;
 import game.rules.Affirmation;
 import game.rules.Check;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class Sow  implements Move{
@@ -26,13 +20,15 @@ public class Sow  implements Move{
     }
 
     @Override
-    public void execute(Player player, GameBoard gameBoard) {
-        Pit pit = gameBoard.getPitAt(pitNumber);
+    public void execute(Player player, Game game) {
+        Pit pit = game.getGameBoard().getPitAt(pitNumber);
         List<Stone> stones = pit.removeStones();
-        for(Stone stone : stones){
+        Stone stone = null;
+        for(int i=0; i<stones.size(); i++){
+            stone = stones.get(i);
             pit = pit.getNextPit();
             DropStone dropStone = new DropStone(stone, pit);
-            Affirmation affirmation = check.thatPlayer(player).given(gameBoard).isAllowed(dropStone);
+            Affirmation affirmation = check.thatPlayer(player).given(game).isAllowed(dropStone);
             int attempt = 0;
             while(!affirmation.ok() && pit != null && attempt < maxAttempts){
                 pit=pit.getNextPit();

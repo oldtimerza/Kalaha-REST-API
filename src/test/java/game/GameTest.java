@@ -37,6 +37,6 @@ public class GameTest {
     public void shouldExecuteMoveThatIsMadeByCurrentPlayer() throws NotPlayersTurnException {
         Move move = Mockito.mock(Sow.class);
         game.makeMove(players.get(0), move);
-        Mockito.verify(move).execute(players.get(0), gameBoard);
+        Mockito.verify(move).execute(players.get(0), game);
     }
 }

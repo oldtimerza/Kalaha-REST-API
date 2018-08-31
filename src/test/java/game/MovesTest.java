@@ -1,7 +1,6 @@
 package game;
 
 import game.moves.DropStone;
-import game.moves.Move;
 import game.moves.Sow;
 import game.rules.Affirmation;
 import game.rules.Allowed;
@@ -41,7 +40,7 @@ public class MovesTest {
         Pit pit = Mockito.mock(Pit.class);
         Stone stone = Mockito.mock(Stone.class);
         DropStone dropStone = new DropStone(stone, pit);
-        dropStone.execute(players.get(0), gameBoard);
+        dropStone.execute(players.get(0), game);
         List<Stone> expectedStones = new ArrayList<>();
         expectedStones.add(stone);
         verify(pit, atLeastOnce()).addStones(ArgumentMatchers.eq(expectedStones));
@@ -70,11 +69,11 @@ public class MovesTest {
         Check<DropStone> check = (Check<DropStone>) Mockito.mock(Check.class);
         Affirmation mockAllowed = Mockito.mock(Allowed.class);
         when(mockAllowed.ok()).thenReturn(true);
-        when(check.given(ArgumentMatchers.any(GameBoard.class))).thenReturn(check);
+        when(check.given(ArgumentMatchers.any(Game.class))).thenReturn(check);
         when(check.thatPlayer(ArgumentMatchers.any(Player.class))).thenReturn(check);
         when(check.isAllowed(ArgumentMatchers.any(DropStone.class))).thenReturn(mockAllowed);
         sow.check = check;
-        sow.execute(players.get(0), gameBoard);
+        sow.execute(players.get(0), game);
         Assert.assertThat(starterPit.getStones().size(), Matchers.equalTo(0));
         verify(mockAllowed, atLeast(numberOfPits)).thenExecute();
     }
