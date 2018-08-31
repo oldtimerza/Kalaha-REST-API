@@ -33,9 +33,9 @@ public class Pit {
         this.nextPit = nextPit;
     }
 
-    public Pit(List<Stone> stones, Player player, int number){
+    public Pit(List<Stone> stones, Player owner, int number){
         this.stones = stones;
-        this.owner = player;
+        this.owner = owner;
         this.number = number;
     }
 
@@ -44,7 +44,7 @@ public class Pit {
     }
 
     public List<Stone> removeStones(){
-        List<Stone> copyStones = stones.subList(0, stones.size());
+        List<Stone> copyStones = new ArrayList<>(stones);
         stones = new ArrayList<>();
         return copyStones;
     }

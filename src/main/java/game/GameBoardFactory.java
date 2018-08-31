@@ -4,7 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GameBoardFactory {
-    public GameBoard createGameBoard(List<Player> players, GameState gameState){
+    public GameBoard createGameBoard(List<Player> players) throws Exception {
+        if(players.size() < 2){
+            throw new Exception("Please include 2 players");
+        }
         List<Pit> pits = new ArrayList<>();
         List<Kalaha> kalahas = new ArrayList<>();
         List<Stone> stones = new ArrayList<>();
@@ -13,9 +16,9 @@ public class GameBoardFactory {
         }
         setupPlayerBoard(pits, kalahas, stones, players.get(0));
         setupPlayerBoard(pits, kalahas, stones, players.get(1));
-        players.get(0).getKalaha().setNextPit(players.get(1).getPits().get(0));
-        players.get(1).getKalaha().setNextPit(players.get(0).getPits().get(0));
-        GameBoard gameBoard = new GameBoard(pits, kalahas, gameState);
+        players.get(0).getKalaha().getPit().setNextPit(players.get(1).getPits().get(0));
+        players.get(1).getKalaha().getPit().setNextPit(players.get(0).getPits().get(0));
+        GameBoard gameBoard = new GameBoard(pits, kalahas);
         return gameBoard;
     }
 
@@ -28,10 +31,11 @@ public class GameBoardFactory {
             player.addPit(pit);
             pits.add(pit);
         }
-        Kalaha kalaha = new Kalaha(new ArrayList<>(), player, pits.size() + 1);
+        Pit kalahaPit = new Pit(new ArrayList<>(), player, pits.size() + 1);
+        Kalaha kalaha = new Kalaha(kalahaPit);
         kalahas.add(kalaha);
-        pits.get(pits.size() - 1).setNextPit(kalaha);
-        pits.add(kalaha);
+        pits.get(pits.size() - 1).setNextPit(kalahaPit);
+        pits.add(kalahaPit);
         player.setKalaha(kalaha);
     }
 

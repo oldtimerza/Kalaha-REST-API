@@ -1,9 +1,12 @@
 package game;
 
-import java.util.List;
+public class Kalaha {
+   private Pit pit;
+   public Kalaha(Pit pit) {
+      this.pit = pit;
+   }
 
-public class Kalaha extends Pit {
-   public Kalaha(List<Stone> stones, Player player, int number) {
-      super(stones, player, number);
+   public Pit getPit() {
+      return pit;
    }
 }

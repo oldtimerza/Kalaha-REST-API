@@ -1,5 +1,13 @@
 package game;
 
 public class GameState {
-    Player currentPlayer;
+    private Player currentPlayer;
+
+    public Player getCurrentPlayer() {
+        return currentPlayer;
+    }
+
+    public void setCurrentPlayer(Player currentPlayer) {
+        this.currentPlayer = currentPlayer;
+    }
 }
