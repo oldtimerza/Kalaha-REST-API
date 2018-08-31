@@ -15,5 +15,7 @@ public abstract class Affirmation {
         this.gameBoard = gameBoard;
     }
 
+    public abstract boolean ok();
+
     public abstract void thenExecute();
 }

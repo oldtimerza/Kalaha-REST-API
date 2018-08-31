@@ -3,6 +3,9 @@ package game;
 import game.moves.DropStone;
 import game.moves.Move;
 import game.moves.Sow;
+import game.rules.Affirmation;
+import game.rules.Allowed;
+import game.rules.Check;
 import org.hamcrest.Matchers;
 import org.junit.Assert;
 import org.junit.Before;
@@ -13,9 +16,7 @@ import org.mockito.Mockito;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.mockito.Mockito.atLeastOnce;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 public class MovesTest {
 
@@ -65,11 +66,16 @@ public class MovesTest {
         Pit starterPit = new Pit(stones, players.get(0), pitNumber);
         starterPit.setNextPit(pits.get(0));
         when(gameBoard.getPitAt(pitNumber)).thenReturn(starterPit);
-        Move sow = new Sow(pitNumber);
+        Sow sow = new Sow(pitNumber);
+        Check<DropStone> check = (Check<DropStone>) Mockito.mock(Check.class);
+        Affirmation mockAllowed = Mockito.mock(Allowed.class);
+        when(mockAllowed.ok()).thenReturn(true);
+        when(check.given(ArgumentMatchers.any(GameBoard.class))).thenReturn(check);
+        when(check.thatPlayer(ArgumentMatchers.any(Player.class))).thenReturn(check);
+        when(check.isAllowed(ArgumentMatchers.any(DropStone.class))).thenReturn(mockAllowed);
+        sow.check = check;
         sow.execute(players.get(0), gameBoard);
         Assert.assertThat(starterPit.getStones().size(), Matchers.equalTo(0));
-        for(Pit pit: pits){
-            Assert.assertThat(pit.getStones().size(), Matchers.equalTo(4));
-        }
+        verify(mockAllowed, atLeast(numberOfPits)).thenExecute();
     }
 }

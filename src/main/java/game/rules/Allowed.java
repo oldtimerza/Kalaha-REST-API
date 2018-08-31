@@ -11,6 +11,11 @@ public class Allowed extends Affirmation {
     }
 
     @Override
+    public boolean ok() {
+        return true;
+    }
+
+    @Override
     public void thenExecute() {
        this.move.execute(this.player, this.gameBoard);
     }

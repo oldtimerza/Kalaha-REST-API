@@ -11,6 +11,11 @@ public class NotAllowed extends Affirmation {
     }
 
     @Override
+    public boolean ok() {
+        return false;
+    }
+
+    @Override
     public void thenExecute() {
 
     }
