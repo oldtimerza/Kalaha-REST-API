@@ -2,7 +2,7 @@ package game;
 
 import game.moves.DropStone;
 import game.rules.Check;
-import org.hamcrest.Matchers;
+import game.rules.DropStoneRules;
 import org.junit.Test;
 import org.mockito.Mockito;
 
@@ -25,7 +25,7 @@ public class RulesTest {
         when(mockGameBoard.getKalahas()).thenReturn(kalahas);
         DropStone dropStone = Mockito.mock(DropStone.class);
         when(dropStone.getPit()).thenReturn(pit);
-        Check.thatPlayer(players.get(0)).given(mockGameBoard).isAllowed(dropStone).thenExecute();
+        new Check(new DropStoneRules()).thatPlayer(players.get(0)).given(mockGameBoard).isAllowed(dropStone).thenExecute();
         verify(dropStone).execute(players.get(0), mockGameBoard);
     }
 
@@ -42,7 +42,7 @@ public class RulesTest {
         when(mockGameBoard.getKalahas()).thenReturn(kalahas);
         DropStone dropStone = Mockito.mock(DropStone.class);
         when(dropStone.getPit()).thenReturn(new Pit(null, players.get(1), 1));
-        Check.thatPlayer(players.get(1)).given(mockGameBoard).isAllowed(dropStone).thenExecute();
+        new Check(new DropStoneRules()).thatPlayer(players.get(1)).given(mockGameBoard).isAllowed(dropStone).thenExecute();
         verify(dropStone, never()).execute(players.get(0), mockGameBoard);
     }
 

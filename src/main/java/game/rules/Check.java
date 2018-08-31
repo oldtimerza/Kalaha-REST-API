@@ -1,22 +1,23 @@
 package game.rules;
 
 import game.GameBoard;
-import game.Kalaha;
 import game.Player;
-import game.moves.DropStone;
+import game.moves.Move;
 
-public class Check {
+public class Check<T extends Move>{
 
-    private Check check;
     private GameBoard gameBoard;
+
     private Player player;
+    private Rules<T> rules;
 
-    private Check(){}
+    public Check(Rules<T> rules){
+        this.rules = rules;
+    }
 
-    public static Check thatPlayer(Player player){
-        Check check = new Check();
-        check.player = player;
-        return check;
+    public Check thatPlayer(Player player){
+        this.player = player;
+        return this;
     }
 
     public Check given(GameBoard gameBoard){
@@ -24,11 +25,10 @@ public class Check {
         return this;
     }
 
-    public Affirmation isAllowed(DropStone dropStone){
-       boolean kalahaOwnsPit = gameBoard.getKalahas().stream().filter(k -> k.getPit().equals(dropStone.getPit()) && k.getPit().getOwner().equals(player)).findFirst().isPresent();
-        if(!kalahaOwnsPit){
-            return new NotAllowed(dropStone, player, gameBoard);
+    public Affirmation isAllowed(T move){
+        if(player != null && gameBoard != null) {
+            return rules.validate(move, gameBoard, player);
         }
-        return new Allowed(dropStone, player, gameBoard);
+        return null;
     }
 }
