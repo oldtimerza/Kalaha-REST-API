@@ -1,7 +1,6 @@
 package game.rules;
 
 import game.Game;
-import game.GameBoard;
 import game.Player;
 import game.moves.Move;
 

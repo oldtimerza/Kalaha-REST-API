@@ -1,5 +1,6 @@
 package game;
 
+import game.moves.CaptureOpponentsStones;
 import game.moves.DropStone;
 import game.moves.Sow;
 import game.rules.Affirmation;
@@ -27,8 +28,8 @@ public class MovesTest {
     @Before
     public void init(){
         players = new ArrayList<>();
-        players.add(new Player());
-        players.add(new Player());
+        players.add(Mockito.mock(Player.class));
+        players.add(Mockito.mock(Player.class));
         state = Mockito.mock(GameState.class);
         when(state.getCurrentPlayer()).thenReturn(players.get(0));
         gameBoard = Mockito.mock(GameBoard.class);
@@ -76,5 +77,43 @@ public class MovesTest {
         sow.execute(players.get(0), game);
         Assert.assertThat(starterPit.getStones().size(), Matchers.equalTo(0));
         verify(mockAllowed, atLeast(numberOfPits)).thenExecute();
+    }
+
+    @Test
+    public void captureOpponentsStonesShouldTakeAllStonesFromOppositePitAndAddThemToMyKalaha(){
+        CaptureOpponentsStones captureOpponentsStones = new CaptureOpponentsStones(2);
+
+        List<Stone> opponentsStones = new ArrayList<>();
+        int numberOfOpponentsStones = 3;
+        for(int i = 0; i < numberOfOpponentsStones; i++){
+            opponentsStones.add(new Stone());
+        }
+        List<Stone> myStones = new ArrayList<>();
+        myStones.add(new Stone());
+
+        Pit kalahaPit = Mockito.mock(Pit.class);
+        Kalaha kalaha = new Kalaha(kalahaPit);
+
+        Pit opponentPit = Mockito.mock(Pit.class);
+        Pit myPit = Mockito.mock(Pit.class);
+        List<Pit> mockedPits = (ArrayList<Pit>)Mockito.mock(ArrayList.class);
+        when(mockedPits.size()).thenReturn(5);
+        when(players.get(0).getPits()).thenReturn(mockedPits);
+        when(players.get(1).getPits()).thenReturn(mockedPits);
+        when(mockedPits.get(ArgumentMatchers.eq(2))).thenReturn(myPit);
+        when(mockedPits.get(ArgumentMatchers.eq(5 - 2))).thenReturn(opponentPit);
+        when(players.get(0).getKalaha()).thenReturn(kalaha);
+
+        when(myPit.removeStones()).thenReturn(myStones);
+        when(opponentPit.removeStones()).thenReturn(opponentsStones);
+
+        List<Stone> expectedStones = new ArrayList<>();
+        expectedStones.addAll(myStones);
+        expectedStones.addAll(opponentsStones);
+
+        captureOpponentsStones.execute(players.get(0), game);
+        verify(myPit).removeStones();
+        verify(opponentPit).removeStones();
+        verify(kalahaPit).addStones(ArgumentMatchers.eq(expectedStones));
     }
 }

@@ -34,5 +34,7 @@ public class Game {
         return this.moves;
     }
 
+    public List<Player> getPlayers(){return players;}
+
     public GameBoard getGameBoard(){return gameBoard;}
 }
