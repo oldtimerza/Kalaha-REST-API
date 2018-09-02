@@ -14,6 +14,10 @@ public class Player {
       return pits;
    }
 
+   public boolean ownsPit(Pit pit){
+      return pits.contains(pit);
+   }
+
    public void addPit(Pit pit) {
       pits.add(pit);
    }
