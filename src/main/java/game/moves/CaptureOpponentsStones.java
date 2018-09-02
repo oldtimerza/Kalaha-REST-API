@@ -7,17 +7,18 @@ import java.util.List;
 
 public class CaptureOpponentsStones implements Move {
 
-    private int pitIndex;
 
-    public CaptureOpponentsStones(int pitIndex){
-        this.pitIndex = pitIndex;
+    private Pit pit;
+
+    public CaptureOpponentsStones(Pit pit){
+        this.pit = pit;
     }
 
     @Override
     public void execute(Player player, Game game) {
         List<Player> players = game.getPlayers();
         Player opposingPlayer = players.stream().filter(p -> !p.equals(player)).findFirst().get();
-        Pit pit = player.getPits().get(pitIndex);
+        int pitIndex = player.getPits().indexOf(pit);
         int numberOfPits = opposingPlayer.getPits().size();
         Pit oppositePit = opposingPlayer.getPits().get(numberOfPits - pitIndex);
         List<Stone> stones = new ArrayList<>();

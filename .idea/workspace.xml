@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="00af679f-9f14-4a02-8007-8c3b61567b44" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/game/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/game/RulesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/game/RulesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/game/moves/CaptureOpponentsStones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/moves/CaptureOpponentsStones.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/game/moves/Sow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/moves/Sow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/game/MovesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/game/MovesTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -17,13 +18,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MovesTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MovesTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/game/MovesTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1122">
-              <caret line="82" column="16" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
+            <state relative-caret-position="422">
+              <caret line="105" column="35" selection-start-line="105" selection-start-column="35" selection-end-line="105" selection-end-column="35" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#init#0;class#MovesTest#0" />
+                <element signature="method#dropStoneShouldAddTheStoneToThePit#0;class#MovesTest#0" />
+                <element signature="method#captureOpponentsStonesShouldTakeAllStonesFromOppositePitAndAddThemToMyKalaha#0;class#MovesTest#0" />
               </folding>
             </state>
           </provider>
@@ -38,32 +41,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ParentRunner.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/runners/ParentRunner.java">
+      <file leaf-file-name="Sow.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/game/moves/Sow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4641">
-              <caret line="327" selection-start-line="327" selection-end-line="327" />
+            <state relative-caret-position="391">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/game/Player.java">
+      <file leaf-file-name="MockMethodInterceptor.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/2.15.0/mockito-core-2.15.0.jar!/org/mockito/internal/creation/bytebuddy/MockMethodInterceptor.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+            <state relative-caret-position="188">
+              <caret line="79" selection-start-line="79" selection-end-line="79" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CaptureStonesRules.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/game/rules/CaptureStonesRules.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#220#221#0" expanded="true" />
-                <element signature="e#244#245#0" expanded="true" />
-                <element signature="e#284#285#0" expanded="true" />
-                <element signature="e#322#323#0" expanded="true" />
-                <element signature="e#278#279#0" expanded="true" />
-                <element signature="e#304#305#0" expanded="true" />
-                <element signature="e#336#337#0" expanded="true" />
-                <element signature="e#362#363#0" expanded="true" />
-                <element signature="e#405#406#0" expanded="true" />
-                <element signature="e#438#439#0" expanded="true" />
+                <element signature="e#255#256#0" expanded="true" />
+                <element signature="e#285#286#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -81,63 +88,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RulesTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/game/RulesTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="69" column="44" selection-start-line="69" selection-start-column="44" selection-end-line="69" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Sow.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/game/moves/Sow.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CaptureOpponentsStones.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/game/moves/CaptureOpponentsStones.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
+            <state relative-caret-position="238">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CaptureStonesRules.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/game/rules/CaptureStonesRules.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#255#256#0" expanded="true" />
-                <element signature="e#285#286#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/game/Game.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="36" column="51" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#209#210#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -177,15 +135,15 @@
         <option value="$PROJECT_DIR$/src/main/java/game/rules/Allowed.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/rules/NotAllowed.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/rules/DropStoneRules.java" />
-        <option value="$PROJECT_DIR$/src/main/java/game/moves/Sow.java" />
         <option value="$PROJECT_DIR$/src/test/java/game/GameTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/rules/Check.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/Game.java" />
-        <option value="$PROJECT_DIR$/src/main/java/game/moves/CaptureOpponentsStones.java" />
-        <option value="$PROJECT_DIR$/src/test/java/game/MovesTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/Player.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/rules/CaptureStonesRules.java" />
         <option value="$PROJECT_DIR$/src/test/java/game/RulesTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/game/moves/Sow.java" />
+        <option value="$PROJECT_DIR$/src/main/java/game/moves/CaptureOpponentsStones.java" />
+        <option value="$PROJECT_DIR$/src/test/java/game/MovesTest.java" />
       </list>
     </option>
   </component>
@@ -310,9 +268,49 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RulesTest">
+  <component name="RunManager" selected="JUnit.All in Backend">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="All in Backend" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Backend" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="MovesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="game" />
+      <option name="MAIN_CLASS_NAME" value="game.MovesTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration name="MovesTest.captureOpponentsStonesShouldTakeAllStonesFromOppositePitAndAddThemToMyKalaha" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Backend" />
@@ -337,7 +335,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="RulesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MovesTest.droppingLastStoneIntoAnOwnedPitShouldCaptureStones" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Backend" />
       <extension name="coverage">
         <pattern>
@@ -348,31 +346,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="game" />
-      <option name="MAIN_CLASS_NAME" value="game.RulesTest" />
-      <option name="METHOD_NAME" value="shouldNotAllowCaptureOfStonesIfTheStoneWasDroppedIntoAnOpponentsPit" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="RulesTest.shouldNotAllowCaptureOfStonesIfTheStoneWasDroppedIntoAnOpponentsPit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="game.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="game" />
-      <option name="MAIN_CLASS_NAME" value="game.RulesTest" />
-      <option name="METHOD_NAME" value="shouldNotAllowCaptureOfStonesIfTheStoneWasDroppedIntoAnOpponentsPit" />
+      <option name="MAIN_CLASS_NAME" value="game.MovesTest" />
+      <option name="METHOD_NAME" value="droppingLastStoneIntoAnOwnedPitShouldCaptureStones" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -383,7 +358,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="RulesTest.shouldOnlyAllowCaptureOfStonesIfTheLastStoneWasDroppedIntoAPitIOwn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MovesTest.sowShouldDropStonesIntoSubsequentPits" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Backend" />
       <extension name="coverage">
         <pattern>
@@ -394,8 +369,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="game" />
-      <option name="MAIN_CLASS_NAME" value="game.RulesTest" />
-      <option name="METHOD_NAME" value="shouldOnlyAllowCaptureOfStonesIfTheLastStoneWasDroppedIntoAPitIOwn" />
+      <option name="MAIN_CLASS_NAME" value="game.MovesTest" />
+      <option name="METHOD_NAME" value="sowShouldDropStonesIntoSubsequentPits" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -413,29 +388,6 @@
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="game in Backend" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="game.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="game" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -468,19 +420,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.game in Backend" />
+      <item itemvalue="JUnit.All in Backend" />
+      <item itemvalue="JUnit.MovesTest" />
       <item itemvalue="JUnit.MovesTest.captureOpponentsStonesShouldTakeAllStonesFromOppositePitAndAddThemToMyKalaha" />
-      <item itemvalue="JUnit.RulesTest.shouldOnlyAllowCaptureOfStonesIfTheLastStoneWasDroppedIntoAPitIOwn" />
-      <item itemvalue="JUnit.RulesTest.shouldNotAllowCaptureOfStonesIfTheStoneWasDroppedIntoAnOpponentsPit" />
-      <item itemvalue="JUnit.RulesTest" />
+      <item itemvalue="JUnit.MovesTest.sowShouldDropStonesIntoSubsequentPits" />
+      <item itemvalue="JUnit.MovesTest.droppingLastStoneIntoAnOwnedPitShouldCaptureStones" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RulesTest" />
-        <item itemvalue="JUnit.RulesTest.shouldNotAllowCaptureOfStonesIfTheStoneWasDroppedIntoAnOpponentsPit" />
-        <item itemvalue="JUnit.RulesTest.shouldOnlyAllowCaptureOfStonesIfTheLastStoneWasDroppedIntoAPitIOwn" />
+        <item itemvalue="JUnit.All in Backend" />
+        <item itemvalue="JUnit.MovesTest.droppingLastStoneIntoAnOwnedPitShouldCaptureStones" />
+        <item itemvalue="JUnit.MovesTest.sowShouldDropStonesIntoSubsequentPits" />
+        <item itemvalue="JUnit.MovesTest" />
         <item itemvalue="JUnit.MovesTest.captureOpponentsStonesShouldTakeAllStonesFromOppositePitAndAddThemToMyKalaha" />
-        <item itemvalue="JUnit.game in Backend" />
       </list>
     </recent_temporary>
   </component>
@@ -495,35 +447,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MovesTest_captureOpponentsStonesShouldTakeAllStonesFromOppositePitAndAddThemToMyKalaha - 2018.09.02 at 01h 46m 52s.xml">
-      <configuration name="MovesTest.captureOpponentsStonesShouldTakeAllStonesFromOppositePitAndAddThemToMyKalaha" configurationId="JUnit" />
+    <history-entry file="MovesTest_sowShouldDropStonesIntoSubsequentPits - 2018.09.02 at 20h 28m 42s.xml">
+      <configuration name="MovesTest.sowShouldDropStonesIntoSubsequentPits" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MovesTest_captureOpponentsStonesShouldTakeAllStonesFromOppositePitAndAddThemToMyKalaha - 2018.09.02 at 01h 48m 01s.xml">
-      <configuration name="MovesTest.captureOpponentsStonesShouldTakeAllStonesFromOppositePitAndAddThemToMyKalaha" configurationId="JUnit" />
+    <history-entry file="All_in_Backend - 2018.09.02 at 20h 35m 01s.xml">
+      <configuration name="All in Backend" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MovesTest_captureOpponentsStonesShouldTakeAllStonesFromOppositePitAndAddThemToMyKalaha - 2018.09.02 at 02h 01m 29s.xml">
-      <configuration name="MovesTest.captureOpponentsStonesShouldTakeAllStonesFromOppositePitAndAddThemToMyKalaha" configurationId="JUnit" />
+    <history-entry file="MovesTest_droppingLastStoneIntoAnOwnedPitShouldCaptureStones - 2018.09.02 at 20h 42m 48s.xml">
+      <configuration name="MovesTest.droppingLastStoneIntoAnOwnedPitShouldCaptureStones" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RulesTest_shouldOnlyAllowCaptureOfStonesIfTheLastStoneWasDroppedIntoAPitIOwn - 2018.09.02 at 02h 02m 30s.xml">
-      <configuration name="RulesTest.shouldOnlyAllowCaptureOfStonesIfTheLastStoneWasDroppedIntoAPitIOwn" configurationId="JUnit" />
+    <history-entry file="MovesTest_droppingLastStoneIntoAnOwnedPitShouldCaptureStones - 2018.09.02 at 20h 42m 58s.xml">
+      <configuration name="MovesTest.droppingLastStoneIntoAnOwnedPitShouldCaptureStones" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RulesTest_shouldOnlyAllowCaptureOfStonesIfTheLastStoneWasDroppedIntoAPitIOwn - 2018.09.02 at 15h 15m 28s.xml">
-      <configuration name="RulesTest.shouldOnlyAllowCaptureOfStonesIfTheLastStoneWasDroppedIntoAPitIOwn" configurationId="JUnit" />
+    <history-entry file="MovesTest_droppingLastStoneIntoAnOwnedPitShouldCaptureStones - 2018.09.02 at 20h 43m 27s.xml">
+      <configuration name="MovesTest.droppingLastStoneIntoAnOwnedPitShouldCaptureStones" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RulesTest_shouldOnlyAllowCaptureOfStonesIfTheLastStoneWasDroppedIntoAPitIOwn - 2018.09.02 at 15h 19m 00s.xml">
-      <configuration name="RulesTest.shouldOnlyAllowCaptureOfStonesIfTheLastStoneWasDroppedIntoAPitIOwn" configurationId="JUnit" />
+    <history-entry file="MovesTest_droppingLastStoneIntoAnOwnedPitShouldCaptureStones - 2018.09.02 at 20h 43m 35s.xml">
+      <configuration name="MovesTest.droppingLastStoneIntoAnOwnedPitShouldCaptureStones" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RulesTest_shouldOnlyAllowCaptureOfStonesIfTheLastStoneWasDroppedIntoAPitIOwn - 2018.09.02 at 15h 19m 27s.xml">
-      <configuration name="RulesTest.shouldOnlyAllowCaptureOfStonesIfTheLastStoneWasDroppedIntoAPitIOwn" configurationId="JUnit" />
+    <history-entry file="MovesTest_droppingLastStoneIntoAnOwnedPitShouldCaptureStones - 2018.09.02 at 20h 43m 57s.xml">
+      <configuration name="MovesTest.droppingLastStoneIntoAnOwnedPitShouldCaptureStones" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RulesTest_shouldOnlyAllowCaptureOfStonesIfTheLastStoneWasDroppedIntoAPitIOwn - 2018.09.02 at 15h 58m 13s.xml">
-      <configuration name="RulesTest.shouldOnlyAllowCaptureOfStonesIfTheLastStoneWasDroppedIntoAPitIOwn" configurationId="JUnit" />
+    <history-entry file="MovesTest_droppingLastStoneIntoAnOwnedPitShouldCaptureStones - 2018.09.02 at 20h 45m 36s.xml">
+      <configuration name="MovesTest.droppingLastStoneIntoAnOwnedPitShouldCaptureStones" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RulesTest_shouldNotAllowCaptureOfStonesIfTheStoneWasDroppedIntoAnOpponentsPit - 2018.09.02 at 15h 58m 53s.xml">
-      <configuration name="RulesTest.shouldNotAllowCaptureOfStonesIfTheStoneWasDroppedIntoAnOpponentsPit" configurationId="JUnit" />
+    <history-entry file="MovesTest_droppingLastStoneIntoAnOwnedPitShouldCaptureStones - 2018.09.02 at 20h 50m 32s.xml">
+      <configuration name="MovesTest.droppingLastStoneIntoAnOwnedPitShouldCaptureStones" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RulesTest_shouldNotAllowCaptureOfStonesIfTheStoneWasDroppedIntoAnOpponentsPit - 2018.09.02 at 16h 20m 04s.xml">
-      <configuration name="RulesTest.shouldNotAllowCaptureOfStonesIfTheStoneWasDroppedIntoAnOpponentsPit" configurationId="JUnit" />
+    <history-entry file="MovesTest_droppingLastStoneIntoAnOwnedPitShouldCaptureStones - 2018.09.02 at 20h 52m 57s.xml">
+      <configuration name="MovesTest.droppingLastStoneIntoAnOwnedPitShouldCaptureStones" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -532,7 +484,7 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Messages" order="7" visible="true" weight="0.32925585" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32925585" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -549,7 +501,7 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39959225" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39959225" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -565,43 +517,37 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/game/MovesTest.java</url>
-          <line>113</line>
-          <properties />
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/game/MovesTest.java</url>
-          <line>83</line>
-          <properties />
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/game/moves/CaptureOpponentsStones.java</url>
-          <line>26</line>
-          <properties />
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/game/moves/CaptureOpponentsStones.java</url>
-          <line>23</line>
-          <properties />
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/game/RulesTest.java</url>
-          <line>75</line>
-          <properties />
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/game/rules/CaptureStonesRules.java</url>
           <line>18</line>
           <properties />
           <option name="timeStamp" value="31" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/game/rules/CaptureStonesRules.java</url>
+          <line>17</line>
+          <properties />
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/game/rules/CaptureStonesRules.java</url>
+          <line>12</line>
+          <properties />
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/game/moves/Sow.java</url>
+          <line>43</line>
+          <properties />
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/game/moves/Sow.java</url>
+          <line>26</line>
+          <properties />
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="32" />
+      <option name="time" value="38" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -673,6 +619,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -692,6 +641,8 @@
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#209#210#0" expanded="true" />
+            <element signature="e#239#240#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -776,20 +727,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/runners/model/FrameworkMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/2.15.0/mockito-core-2.15.0.jar!/org/mockito/internal/creation/bytebuddy/MockMethodInterceptor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="79" selection-start-line="79" selection-end-line="79" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/rules/Rules.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -815,13 +752,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/game/rules/DropStoneRules.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -915,37 +845,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/game/moves/DropStone.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/moves/Move.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/game/rules/Check.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/game/moves/Sow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -969,36 +872,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/game/RulesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/game/moves/CaptureOpponentsStones.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
+        <state relative-caret-position="287">
+          <caret line="71" column="4" selection-start-line="71" selection-start-column="4" selection-end-line="71" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/game/MovesTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/game/rules/DropStoneRules.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="82" column="16" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="187">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
+        <state relative-caret-position="253">
           <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1016,10 +909,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/runners/model/FrameworkMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="e#1464#1658#0" expanded="true" />
+            <element signature="e#1657#1658#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/game/moves/DropStone.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/rules/CaptureStonesRules.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
+        <state relative-caret-position="306">
+          <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#255#256#0" expanded="true" />
@@ -1028,12 +942,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/game/RulesTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/game/moves/CaptureOpponentsStones.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="69" column="44" selection-start-line="69" selection-start-column="44" selection-end-line="69" selection-end-column="44" />
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#209#210#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/2.15.0/mockito-core-2.15.0.jar!/org/mockito/internal/creation/bytebuddy/MockMethodInterceptor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/game/rules/Check.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/game/moves/Sow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/game/MovesTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="105" column="35" selection-start-line="105" selection-start-column="35" selection-end-line="105" selection-end-column="35" />
+          <folding>
+            <element signature="method#init#0;class#MovesTest#0" />
+            <element signature="method#dropStoneShouldAddTheStoneToThePit#0;class#MovesTest#0" />
+            <element signature="method#captureOpponentsStonesShouldTakeAllStonesFromOppositePitAndAddThemToMyKalaha#0;class#MovesTest#0" />
           </folding>
         </state>
       </provider>
