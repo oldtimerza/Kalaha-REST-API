@@ -23,6 +23,7 @@ public class GameTest {
         players.add(new Player());
         GameState state = new GameState();
         state.setCurrentPlayer(players.get(0));
+        state.setNextPlayer(players.get(1));
         gameBoard = new GameBoardFactory().createGameBoard(players);
         game = new Game(gameBoard, state ,players);
     }

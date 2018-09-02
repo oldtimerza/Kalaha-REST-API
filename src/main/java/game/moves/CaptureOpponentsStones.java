@@ -7,7 +7,6 @@ import java.util.List;
 
 public class CaptureOpponentsStones implements Move {
 
-
     private Pit pit;
 
     public CaptureOpponentsStones(Pit pit){
@@ -26,5 +25,9 @@ public class CaptureOpponentsStones implements Move {
         stones.addAll(pit.removeStones());
         stones.addAll(oppositePit.removeStones());
         kalaha.getPit().addStones(stones);
+    }
+
+    public Pit getPit(){
+        return pit;
     }
 }

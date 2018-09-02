@@ -14,6 +14,9 @@ public class Sow  implements Move{
     @Autowired
     public Check<CaptureOpponentsStones> captureOpponentsStonesCheck;
 
+    @Autowired
+    public Check<TakeAnotherTurn> takeAnotherTurnCheck;
+
     private final int maxAttempts = 100;
 
     private int pitNumber;
@@ -42,5 +45,6 @@ public class Sow  implements Move{
             affirmation.thenExecute();
         }
         captureOpponentsStonesCheck.thatPlayer(player).given(game).isAllowed(new CaptureOpponentsStones(pit)).thenExecute();
+        takeAnotherTurnCheck.thatPlayer(player).given(game).isAllowed(new TakeAnotherTurn(pit)).thenExecute();
     }
 }

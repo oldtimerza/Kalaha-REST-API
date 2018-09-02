@@ -27,7 +27,22 @@ public class Game {
         }
         moves.add(move);
         move.execute(player, this);
+        nextPlayersTurn();
         return this;
+    }
+
+    private void nextPlayersTurn(){
+        this.state.setCurrentPlayer(this.state.getNextPlayer());
+        if(this.state.getNextPlayer().equals(players.get(players.size() - 1))){
+            setNextPlayer(players.get(0));
+        }else{
+            int currentPlayerIndex = players.indexOf(this.state.getCurrentPlayer());
+            setNextPlayer(players.get(currentPlayerIndex + 1));
+        }
+    }
+
+    public void setNextPlayer(Player player){
+        this.state.setNextPlayer(player);
     }
 
     public List<Move> getMoves(){

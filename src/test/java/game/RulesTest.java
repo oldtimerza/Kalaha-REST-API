@@ -3,11 +3,14 @@ package game;
 import game.moves.CaptureOpponentsStones;
 import game.moves.DropStone;
 import game.moves.Move;
+import game.moves.TakeAnotherTurn;
 import game.rules.CaptureStonesRules;
 import game.rules.Check;
 import game.rules.DropStoneRules;
+import game.rules.TakeAnotherTurnRules;
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.ArgumentMatchers;
 import org.mockito.Mockito;
 
 import java.util.ArrayList;
@@ -64,10 +67,11 @@ public class RulesTest {
     @Test
     public void shouldOnlyAllowCaptureOfStonesIfTheLastStoneWasDroppedIntoAPitIOwn(){
         Player player = players.get(0);
-        Move captureStones = Mockito.mock(CaptureOpponentsStones.class);
+        CaptureOpponentsStones captureStones = Mockito.mock(CaptureOpponentsStones.class);
         Pit pit = Mockito.mock(Pit.class);
-        when(player.ownsPit(pit)).thenReturn(true);
-        new Check(new CaptureStonesRules(pit)).thatPlayer(player).given(game).isAllowed(captureStones).thenExecute();
+        when(captureStones.getPit()).thenReturn(pit);
+        when(player.ownsPit(ArgumentMatchers.any(Pit.class))).thenReturn(true);
+        new Check(new CaptureStonesRules()).thatPlayer(player).given(game).isAllowed(captureStones).thenExecute();
         verify(captureStones).execute(player, game);
     }
 
@@ -77,8 +81,23 @@ public class RulesTest {
         Move captureStones = Mockito.mock(CaptureOpponentsStones.class);
         Pit pit = Mockito.mock(Pit.class);
         when(player.ownsPit(pit)).thenReturn(false);
-        new Check(new CaptureStonesRules(pit)).thatPlayer(player).given(game).isAllowed(captureStones).thenExecute();
+        new Check(new CaptureStonesRules()).thatPlayer(player).given(game).isAllowed(captureStones).thenExecute();
         verify(captureStones, never()).execute(player, game);
     }
 
+    @Test
+    public void shouldTakeAnotherTurnIfLastStoneDroppedIntoMyKalaha(){
+        TakeAnotherTurn takeAnotherTurn = Mockito.mock(TakeAnotherTurn.class);
+        Pit pit = Mockito.mock(Pit.class);
+        Player player = Mockito.mock(Player.class);
+        List<Kalaha> kalahas = new ArrayList<>();
+        Kalaha kalaha = Mockito.mock(Kalaha.class);
+        kalahas.add(kalaha);
+        when(gameBoard.getKalahas()).thenReturn(kalahas);
+        when(takeAnotherTurn.getPit()).thenReturn(pit);
+        when(kalaha.getPit()).thenReturn(pit);
+        when(player.ownsPit(ArgumentMatchers.any(Pit.class))).thenReturn(true);
+        new Check(new TakeAnotherTurnRules()).thatPlayer(player).given(game).isAllowed(takeAnotherTurn).thenExecute();
+        verify(takeAnotherTurn).execute(player, game);
+    }
 }

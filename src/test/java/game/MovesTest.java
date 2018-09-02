@@ -3,6 +3,7 @@ package game;
 import game.moves.CaptureOpponentsStones;
 import game.moves.DropStone;
 import game.moves.Sow;
+import game.moves.TakeAnotherTurn;
 import game.rules.*;
 import org.hamcrest.Matchers;
 import org.junit.Assert;
@@ -77,8 +78,13 @@ public class MovesTest {
         when(captureOpponentsStonesCheck.thatPlayer(ArgumentMatchers.any(Player.class))).thenReturn(captureOpponentsStonesCheck);
         Affirmation notAllowed = Mockito.mock(NotAllowed.class);
         when(captureOpponentsStonesCheck.isAllowed(ArgumentMatchers.any(CaptureOpponentsStones.class))).thenReturn(notAllowed);
+        Check<TakeAnotherTurn>  takeAnotherTurnCheck = (Check<TakeAnotherTurn>)Mockito.mock(Check.class);
+        when(takeAnotherTurnCheck.given(ArgumentMatchers.any(Game.class))).thenReturn(takeAnotherTurnCheck);
+        when(takeAnotherTurnCheck.thatPlayer(ArgumentMatchers.any(Player.class))).thenReturn(takeAnotherTurnCheck);
+        when(takeAnotherTurnCheck.isAllowed(ArgumentMatchers.any(TakeAnotherTurn.class))).thenReturn(notAllowed);
         sow.dropStoneCheck = dropStoneCheck;
         sow.captureOpponentsStonesCheck = captureOpponentsStonesCheck;
+        sow.takeAnotherTurnCheck = takeAnotherTurnCheck;
         sow.execute(players.get(0), game);
         Assert.assertThat(starterPit.getStones().size(), Matchers.equalTo(0));
         verify(mockAllowed, atLeast(numberOfPits)).thenExecute();
@@ -101,7 +107,13 @@ public class MovesTest {
         when(captureOpponentsStonesCheck.thatPlayer(ArgumentMatchers.any(Player.class))).thenReturn(captureOpponentsStonesCheck);
         Affirmation allowed = Mockito.mock(Allowed.class);
         when(captureOpponentsStonesCheck.isAllowed(ArgumentMatchers.any(CaptureOpponentsStones.class))).thenReturn(allowed);
+        Check<TakeAnotherTurn>  takeAnotherTurnCheck = (Check<TakeAnotherTurn>)Mockito.mock(Check.class);
+        when(takeAnotherTurnCheck.given(ArgumentMatchers.any(Game.class))).thenReturn(takeAnotherTurnCheck);
+        when(takeAnotherTurnCheck.thatPlayer(ArgumentMatchers.any(Player.class))).thenReturn(takeAnotherTurnCheck);
+        NotAllowed notAllowed = Mockito.mock(NotAllowed.class);
+        when(takeAnotherTurnCheck.isAllowed(ArgumentMatchers.any(TakeAnotherTurn.class))).thenReturn(notAllowed);
         sow.captureOpponentsStonesCheck = captureOpponentsStonesCheck;
+        sow.takeAnotherTurnCheck = takeAnotherTurnCheck;
         sow.execute(players.get(0), game);
         verify(allowed).thenExecute();
     }
@@ -142,5 +154,15 @@ public class MovesTest {
         verify(myPit).removeStones();
         verify(opponentPit).removeStones();
         verify(kalahaPit).addStones(ArgumentMatchers.eq(expectedStones));
+    }
+
+    @Test
+    public void takeNextTurnShouldUpdateGameStateNextPlayer(){
+        Pit pit = Mockito.mock(Pit.class);
+        TakeAnotherTurn takeAnotherTurn = new TakeAnotherTurn(pit);
+        Player player = players.get(0);
+        Game mockGame = Mockito.mock(Game.class);
+        takeAnotherTurn.execute(player, mockGame);
+        verify(mockGame).setNextPlayer(player);
     }
 }
