@@ -22,13 +22,31 @@ public class Game {
     }
 
     public Game makeMove(Player player, Move move) throws NotPlayersTurnException {
+        if(state.getStatus().equals(Status.ENDED)){
+            return this;
+        }
         if(!player.equals(state.getCurrentPlayer())){
             throw new NotPlayersTurnException();
         }
         moves.add(move);
         move.execute(player, this);
+        checkForGameEnd();
         nextPlayersTurn();
         return this;
+    }
+
+    private void checkForGameEnd() {
+        boolean ended = true;
+        for(Player player : players){
+            for(Pit pit: player.getPits()){
+                if(pit.getStones().size() > 0 ){
+                    ended = false;
+                }
+            }
+        }
+        if(ended){
+            this.state.setStatus(Status.ENDED);
+        }
     }
 
     private void nextPlayersTurn(){

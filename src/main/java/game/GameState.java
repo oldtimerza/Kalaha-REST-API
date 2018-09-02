@@ -5,6 +5,8 @@ public class GameState {
 
     private Player nextPlayer;
 
+    private Status status = Status.RUNNING;
+
     public Player getCurrentPlayer() {
         return currentPlayer;
     }
@@ -19,5 +21,13 @@ public class GameState {
 
     public void setNextPlayer(Player nextPlayer) {
         this.nextPlayer = nextPlayer;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
     }
 }

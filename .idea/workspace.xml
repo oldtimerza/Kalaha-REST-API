@@ -4,11 +4,7 @@
     <list default="true" id="00af679f-9f14-4a02-8007-8c3b61567b44" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/game/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/GameState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/game/moves/CaptureOpponentsStones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/moves/CaptureOpponentsStones.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/game/moves/Sow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/moves/Sow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/game/rules/CaptureStonesRules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/rules/CaptureStonesRules.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/game/MovesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/game/MovesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/game/RulesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/game/RulesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/game/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/game/GameTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -21,24 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MovesTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/game/MovesTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="86" column="55" selection-start-line="86" selection-start-column="55" selection-end-line="86" selection-end-column="55" />
-              <folding>
-                <element signature="method#dropStoneShouldAddTheStoneToThePit#0;class#MovesTest#0" />
-                <element signature="method#captureOpponentsStonesShouldTakeAllStonesFromOppositePitAndAddThemToMyKalaha#0;class#MovesTest#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GameTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/game/GameTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="39" column="56" selection-start-line="39" selection-start-column="56" selection-end-line="39" selection-end-column="56" />
+            <state relative-caret-position="134">
+              <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,7 +71,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RulesTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RulesTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/game/RulesTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="576">
@@ -115,8 +98,8 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/game/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="287">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#791#792#0" expanded="true" />
@@ -128,30 +111,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CaptureOpponentsStones.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/game/moves/CaptureOpponentsStones.java">
+      <file leaf-file-name="GameState.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/game/GameState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="340">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#209#210#0" expanded="true" />
-                <element signature="e#239#240#0" expanded="true" />
-                <element signature="e#914#915#0" expanded="true" />
-                <element signature="e#939#940#0" expanded="true" />
+                <element signature="e#541#542#0" expanded="true" />
+                <element signature="e#570#571#0" expanded="true" />
+                <element signature="e#614#615#0" expanded="true" />
+                <element signature="e#650#651#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CaptureStonesRules.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/game/rules/CaptureStonesRules.java">
+      <file leaf-file-name="Status.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/game/Status.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameBoardFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/game/GameBoardFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="8" column="54" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -162,6 +150,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -189,18 +178,19 @@
         <option value="$PROJECT_DIR$/src/main/java/game/rules/Allowed.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/rules/NotAllowed.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/rules/DropStoneRules.java" />
-        <option value="$PROJECT_DIR$/src/test/java/game/GameTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/rules/Check.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/Player.java" />
-        <option value="$PROJECT_DIR$/src/main/java/game/GameState.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/moves/CaptureOpponentsStones.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/moves/TakeAnotherTurn.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/rules/CaptureStonesRules.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/moves/Sow.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/rules/TakeAnotherTurnRules.java" />
         <option value="$PROJECT_DIR$/src/test/java/game/MovesTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/game/Game.java" />
         <option value="$PROJECT_DIR$/src/test/java/game/RulesTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/game/Status.java" />
+        <option value="$PROJECT_DIR$/src/main/java/game/GameState.java" />
+        <option value="$PROJECT_DIR$/src/main/java/game/Game.java" />
+        <option value="$PROJECT_DIR$/src/test/java/game/GameTest.java" />
       </list>
     </option>
   </component>
@@ -257,24 +247,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="game" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kalahabackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
-              <item name="moves" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kalahabackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
-              <item name="rules" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kalahabackend" type="b2602c69:ProjectViewProjectNode" />
@@ -346,7 +318,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="MovesTest.takeNextTurnShouldUpdateGameStateNextPlayer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Backend" />
       <extension name="coverage">
         <pattern>
@@ -357,8 +329,31 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="game" />
-      <option name="MAIN_CLASS_NAME" value="game.MovesTest" />
-      <option name="METHOD_NAME" value="takeNextTurnShouldUpdateGameStateNextPlayer" />
+      <option name="MAIN_CLASS_NAME" value="game.GameTest" />
+      <option name="METHOD_NAME" value="shouldEndGameIfAPlayerHasNoStonesLeftInPit" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="GameTest.shouldEndGameIfAPlayerHasNoStonesLeftInPit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="game" />
+      <option name="MAIN_CLASS_NAME" value="game.GameTest" />
+      <option name="METHOD_NAME" value="shouldEndGameIfAPlayerHasNoStonesLeftInPit" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -383,29 +378,6 @@
       <option name="MAIN_CLASS_NAME" value="game.RulesTest" />
       <option name="METHOD_NAME" value="shouldTakeAnotherTurnIfLastStoneDroppedIntoMyKalaha" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="RulesTest.shouldOnlyAllowCaptureOfStonesIfTheLastStoneWasDroppedIntoAPitIOwn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="game.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="game" />
-      <option name="MAIN_CLASS_NAME" value="game.RulesTest" />
-      <option name="METHOD_NAME" value="shouldOnlyAllowCaptureOfStonesIfTheLastStoneWasDroppedIntoAPitIOwn" />
-      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -478,18 +450,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.All in Backend" />
-      <item itemvalue="JUnit.MovesTest.takeNextTurnShouldUpdateGameStateNextPlayer" />
-      <item itemvalue="JUnit.RulesTest.shouldOnlyAllowCaptureOfStonesIfTheLastStoneWasDroppedIntoAPitIOwn" />
       <item itemvalue="JUnit.RulesTest.shouldTakeAnotherTurnIfLastStoneDroppedIntoMyKalaha" />
       <item itemvalue="JUnit.RulesTest" />
+      <item itemvalue="JUnit.GameTest.shouldEndGameIfAPlayerHasNoStonesLeftInPit" />
+      <item itemvalue="JUnit.GameTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in Backend" />
+        <item itemvalue="JUnit.GameTest" />
+        <item itemvalue="JUnit.GameTest.shouldEndGameIfAPlayerHasNoStonesLeftInPit" />
         <item itemvalue="JUnit.RulesTest.shouldTakeAnotherTurnIfLastStoneDroppedIntoMyKalaha" />
         <item itemvalue="JUnit.RulesTest" />
-        <item itemvalue="JUnit.RulesTest.shouldOnlyAllowCaptureOfStonesIfTheLastStoneWasDroppedIntoAPitIOwn" />
-        <item itemvalue="JUnit.MovesTest.takeNextTurnShouldUpdateGameStateNextPlayer" />
       </list>
     </recent_temporary>
   </component>
@@ -504,24 +476,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RulesTest_shouldOnlyAllowCaptureOfStonesIfTheLastStoneWasDroppedIntoAPitIOwn - 2018.09.02 at 23h 01m 11s.xml">
-      <configuration name="RulesTest.shouldOnlyAllowCaptureOfStonesIfTheLastStoneWasDroppedIntoAPitIOwn" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RulesTest_shouldOnlyAllowCaptureOfStonesIfTheLastStoneWasDroppedIntoAPitIOwn - 2018.09.02 at 23h 02m 50s.xml">
-      <configuration name="RulesTest.shouldOnlyAllowCaptureOfStonesIfTheLastStoneWasDroppedIntoAPitIOwn" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_Backend - 2018.09.02 at 23h 03m 03s.xml">
-      <configuration name="All in Backend" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RulesTest_shouldTakeAnotherTurnIfLastStoneDroppedIntoMyKalaha - 2018.09.02 at 23h 16m 39s.xml">
-      <configuration name="RulesTest.shouldTakeAnotherTurnIfLastStoneDroppedIntoMyKalaha" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RulesTest_shouldTakeAnotherTurnIfLastStoneDroppedIntoMyKalaha - 2018.09.02 at 23h 19m 41s.xml">
-      <configuration name="RulesTest.shouldTakeAnotherTurnIfLastStoneDroppedIntoMyKalaha" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RulesTest_shouldTakeAnotherTurnIfLastStoneDroppedIntoMyKalaha - 2018.09.02 at 23h 38m 07s.xml">
-      <configuration name="RulesTest.shouldTakeAnotherTurnIfLastStoneDroppedIntoMyKalaha" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="RulesTest - 2018.09.02 at 23h 44m 09s.xml">
       <configuration name="RulesTest" configurationId="JUnit" />
     </history-entry>
@@ -533,6 +487,24 @@
     </history-entry>
     <history-entry file="RulesTest_shouldTakeAnotherTurnIfLastStoneDroppedIntoMyKalaha - 2018.09.03 at 00h 04m 35s.xml">
       <configuration name="RulesTest.shouldTakeAnotherTurnIfLastStoneDroppedIntoMyKalaha" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_Backend - 2018.09.03 at 00h 04m 54s.xml">
+      <configuration name="All in Backend" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_Backend - 2018.09.03 at 00h 06m 18s.xml">
+      <configuration name="All in Backend" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_Backend - 2018.09.03 at 00h 17m 50s.xml">
+      <configuration name="All in Backend" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GameTest_shouldEndGameIfAPlayerHasNoStonesLeftInPit - 2018.09.03 at 00h 22m 24s.xml">
+      <configuration name="GameTest.shouldEndGameIfAPlayerHasNoStonesLeftInPit" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GameTest_shouldEndGameIfAPlayerHasNoStonesLeftInPit - 2018.09.03 at 00h 24m 19s.xml">
+      <configuration name="GameTest.shouldEndGameIfAPlayerHasNoStonesLeftInPit" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GameTest_shouldEndGameIfAPlayerHasNoStonesLeftInPit - 2018.09.03 at 00h 26m 20s.xml">
+      <configuration name="GameTest.shouldEndGameIfAPlayerHasNoStonesLeftInPit" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -597,31 +569,23 @@
           <properties />
           <option name="timeStamp" value="40" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/game/Game.java</url>
+          <line>32</line>
+          <properties />
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/game/Game.java</url>
+          <line>38</line>
+          <properties />
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="41" />
+      <option name="time" value="43" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/game/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#220#221#0" expanded="true" />
-            <element signature="e#244#245#0" expanded="true" />
-            <element signature="e#284#285#0" expanded="true" />
-            <element signature="e#322#323#0" expanded="true" />
-            <element signature="e#278#279#0" expanded="true" />
-            <element signature="e#304#305#0" expanded="true" />
-            <element signature="e#336#337#0" expanded="true" />
-            <element signature="e#362#363#0" expanded="true" />
-            <element signature="e#405#406#0" expanded="true" />
-            <element signature="e#438#439#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/rules/Check.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -799,13 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/game/GameBoardFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="8" column="54" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/Kalaha.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -937,33 +894,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/game/GameState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#329#330#0" expanded="true" />
-            <element signature="e#362#363#0" expanded="true" />
-            <element signature="e#414#415#0" expanded="true" />
-            <element signature="e#458#459#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/rules/DropStoneRules.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/game/GameTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="39" column="56" selection-start-line="39" selection-start-column="56" selection-end-line="39" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1022,20 +956,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/game/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#791#792#0" expanded="true" />
-            <element signature="e#810#811#0" expanded="true" />
-            <element signature="e#949#950#0" expanded="true" />
-            <element signature="e#982#983#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/moves/TakeAnotherTurn.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1066,6 +986,57 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
           <caret line="88" column="21" selection-start-line="88" selection-start-column="21" selection-end-line="88" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/game/Status.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/game/GameBoardFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="8" column="54" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/game/GameState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#541#542#0" expanded="true" />
+            <element signature="e#570#571#0" expanded="true" />
+            <element signature="e#614#615#0" expanded="true" />
+            <element signature="e#650#651#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/game/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#791#792#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
+            <element signature="e#949#950#0" expanded="true" />
+            <element signature="e#982#983#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/game/GameTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
