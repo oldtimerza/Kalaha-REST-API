@@ -3,25 +3,25 @@ package kalaha.game.moves;
 import kalaha.game.*;
 import kalaha.game.rules.Affirmation;
 import kalaha.game.rules.Check;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import java.util.List;
 
 public class Sow  implements Move{
 
-    @Autowired
-    public Check<DropStone> dropStoneCheck;
+    private Check<DropStone> dropStoneCheck;
 
-    @Autowired
-    public Check<CaptureOpponentsStones> captureOpponentsStonesCheck;
+    private Check<CaptureOpponentsStones> captureOpponentsStonesCheck;
 
-    @Autowired
-    public Check<TakeAnotherTurn> takeAnotherTurnCheck;
+    private Check<TakeAnotherTurn> takeAnotherTurnCheck;
 
     private final int maxAttempts = 100;
 
     private int pitNumber;
 
-    public Sow(int pitNumber) {
+    public Sow(Check<DropStone> dropStoneCheck, Check<CaptureOpponentsStones> captureOpponentsStonesCheck, Check<TakeAnotherTurn> takeAnotherTurnCheck, int pitNumber) {
+        this.dropStoneCheck = dropStoneCheck;
+        this.captureOpponentsStonesCheck = captureOpponentsStonesCheck;
+        this.takeAnotherTurnCheck = takeAnotherTurnCheck;
         this.pitNumber = pitNumber;
     }
 

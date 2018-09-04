@@ -15,7 +15,7 @@ public class GameBoardTest {
         List<Player> players = new ArrayList<Player>();
         players.add(new Player(0));
         players.add(new Player(1));
-        GameBoard gameBoard = new GameBoardFactory().createGameBoard(players);
+        GameBoard gameBoard = new GameBoardFactory().createInitialBoard(players);
         Pit actual = gameBoard.getPitAt(1);
         Assert.assertThat(actual, Matchers.equalTo(gameBoard.getPits().get(0)));
     }

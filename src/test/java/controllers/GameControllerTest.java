@@ -34,7 +34,7 @@ public class GameControllerTest {
                 .get("/game/start")
                 .then()
                 .statusCode(200)
-                .body("activePlayerIndex", Matchers.equalTo(0))
+                .body("currentPlayerIndex", Matchers.equalTo(0))
                 .body("status", Matchers.equalTo("RUNNING"))
                 .body("kalahas[0].pitNumber", Matchers.equalTo(7))
                 .body("kalahas[1].pitNumber", Matchers.equalTo(14))

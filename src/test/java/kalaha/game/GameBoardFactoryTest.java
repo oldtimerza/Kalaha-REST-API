@@ -16,7 +16,7 @@ public class GameBoardFactoryTest {
         players.add(new Player(1));
         GameBoardFactory factory = new GameBoardFactory();
         GameState gameState = new GameState();
-        GameBoard gameBoard = factory.createGameBoard(players);
+        GameBoard gameBoard = factory.createInitialBoard(players);
 
         Assert.assertThat(gameBoard.getKalahas().size(), equalTo(2));
         Assert.assertThat(gameBoard.getPits().size(), equalTo(14));
@@ -38,6 +38,11 @@ public class GameBoardFactoryTest {
         }
         kalaha = gameBoard.getKalahas().get(1);
         Assert.assertThat(players.get(1).getKalaha(), equalTo(kalaha));
+    }
+
+    @Test
+    public void shouldGetGameBoardFromDtos(){
+
     }
 
     private void assertKalaha(Kalaha kalaha, Player player){

@@ -37,21 +37,20 @@ public class RulesTest {
     @Test
     public void shouldExecuteDropStoneIfNotDroppingIntoOpponentKalaha(){
         List<Kalaha> kalahas = new ArrayList<>();
+        Player player = Mockito.mock(Player.class);
         Pit pit = new Pit(null, players.get(0), 0);
         Kalaha kalaha = new Kalaha(pit);
         kalahas.add(kalaha);
         when(gameBoard.getKalahas()).thenReturn(kalahas);
         DropStone dropStone = Mockito.mock(DropStone.class);
         when(dropStone.getPit()).thenReturn(pit);
+        when(players.get(0).getKalaha()).thenReturn(kalaha);
         new Check(new DropStoneRules()).thatPlayer(players.get(0)).given(game).isAllowed(dropStone).thenExecute();
         verify(dropStone).execute(players.get(0), game);
     }
 
     @Test
     public void shouldNotExecuteDropStoneIfDroppingIntoOpponentKalaha(){
-        List<Player> players = new ArrayList<>();
-        players.add(new Player(0));
-        players.add(new Player(1));
         GameBoard mockGameBoard = Mockito.mock(GameBoard.class);
         List<Kalaha> kalahas = new ArrayList<>();
         Pit pit = new Pit(null, players.get(0), 0);
@@ -60,6 +59,7 @@ public class RulesTest {
         when(mockGameBoard.getKalahas()).thenReturn(kalahas);
         DropStone dropStone = Mockito.mock(DropStone.class);
         when(dropStone.getPit()).thenReturn(new Pit(null, players.get(1), 1));
+        when(players.get(1).getKalaha()).thenReturn(kalaha);
         new Check(new DropStoneRules()).thatPlayer(players.get(1)).given(game).isAllowed(dropStone).thenExecute();
         verify(dropStone, never()).execute(players.get(0), game);
     }

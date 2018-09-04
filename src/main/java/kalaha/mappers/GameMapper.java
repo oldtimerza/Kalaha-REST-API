@@ -11,10 +11,12 @@ public class GameMapper {
        return new PropertyMap<Game, GameDto>() {
            @Override
            protected void configure() {
-              map(source.getCurrentPlayer().getIndex(), destination.activePlayerIndex);
-              map(source.getGameBoard().getKalahas(), destination.kalahas);
-              map(source.getGameBoard().getPits(), destination.pits);
-              map(source.getStatus(), destination.status);
+               map(source.getCurrentPlayer().getIndex(), destination.currentPlayerIndex);
+               map(source.getNextPlayer().getIndex(), destination.nextPlayerIndex);
+               map(source.getGameBoard().getKalahas(), destination.kalahas);
+               map(source.getGameBoard().getPits(), destination.pits);
+               map(source.getStatus(), destination.status);
+               map(source.getPlayers().size(), destination.numberOfPlayers);
            }
        };
     }

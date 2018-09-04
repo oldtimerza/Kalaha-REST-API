@@ -10,7 +10,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.ArgumentMatchers;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 
 import java.util.ArrayList;
@@ -66,7 +65,6 @@ public class MovesTest {
         Pit starterPit = new Pit(stones, players.get(0), pitNumber);
         starterPit.setNextPit(pits.get(0));
         when(gameBoard.getPitAt(pitNumber)).thenReturn(starterPit);
-        Sow sow = new Sow(pitNumber);
         Check<DropStone> dropStoneCheck = (Check<DropStone>) Mockito.mock(Check.class);
         Check<CaptureOpponentsStones> captureOpponentsStonesCheck = (Check<CaptureOpponentsStones>) Mockito.mock(Check.class);
         Affirmation mockAllowed = Mockito.mock(Allowed.class);
@@ -82,16 +80,14 @@ public class MovesTest {
         when(takeAnotherTurnCheck.given(ArgumentMatchers.any(Game.class))).thenReturn(takeAnotherTurnCheck);
         when(takeAnotherTurnCheck.thatPlayer(ArgumentMatchers.any(Player.class))).thenReturn(takeAnotherTurnCheck);
         when(takeAnotherTurnCheck.isAllowed(ArgumentMatchers.any(TakeAnotherTurn.class))).thenReturn(notAllowed);
-        sow.dropStoneCheck = dropStoneCheck;
-        sow.captureOpponentsStonesCheck = captureOpponentsStonesCheck;
-        sow.takeAnotherTurnCheck = takeAnotherTurnCheck;
+        Sow sow = new Sow(dropStoneCheck, captureOpponentsStonesCheck, takeAnotherTurnCheck, pitNumber);
         sow.execute(players.get(0), game);
         Assert.assertThat(starterPit.getStones().size(), Matchers.equalTo(0));
         verify(mockAllowed, atLeast(numberOfPits)).thenExecute();
     }
 
     @Test
-    public void droppingLastStoneIntoAnOwnedPitShouldCaptureStones()
+    public void droppingLastStoneIntoAnOwnedEmptyPitShouldCaptureStones()
     {
         List<Stone> stones = new ArrayList<>();
         stones.add(new Stone());
@@ -99,8 +95,8 @@ public class MovesTest {
         Stone lastStone = new Stone();
         stones.add(lastStone);
         int pitNumber = 1;
-        Sow sow = new Sow(pitNumber);
         Pit pit = Mockito.mock(Pit.class);
+        when(pit.getStones()).thenReturn(new ArrayList<>());
         when(gameBoard.getPitAt(pitNumber)).thenReturn(pit);
         Check<CaptureOpponentsStones> captureOpponentsStonesCheck = (Check<CaptureOpponentsStones>) Mockito.mock(Check.class);
         when(captureOpponentsStonesCheck.given(ArgumentMatchers.any(Game.class))).thenReturn(captureOpponentsStonesCheck);
@@ -112,8 +108,8 @@ public class MovesTest {
         when(takeAnotherTurnCheck.thatPlayer(ArgumentMatchers.any(Player.class))).thenReturn(takeAnotherTurnCheck);
         NotAllowed notAllowed = Mockito.mock(NotAllowed.class);
         when(takeAnotherTurnCheck.isAllowed(ArgumentMatchers.any(TakeAnotherTurn.class))).thenReturn(notAllowed);
-        sow.captureOpponentsStonesCheck = captureOpponentsStonesCheck;
-        sow.takeAnotherTurnCheck = takeAnotherTurnCheck;
+        Check<DropStone> dropStoneCheck = Mockito.mock(Check.class);
+        Sow sow = new Sow(dropStoneCheck, captureOpponentsStonesCheck, takeAnotherTurnCheck, pitNumber);
         sow.execute(players.get(0), game);
         verify(allowed).thenExecute();
     }

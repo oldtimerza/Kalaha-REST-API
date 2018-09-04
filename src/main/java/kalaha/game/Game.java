@@ -12,13 +12,10 @@ public class Game {
 
     private List<Player> players;
 
-    private List<Move> moves;
-
     public Game(GameBoard gameBoard, GameState state, List<Player> players){
         this.gameBoard = gameBoard;
         this.state = state;
         this.players = players;
-        moves = new ArrayList<>();
     }
 
     public Game makeMove(Player player, Move move) throws NotPlayersTurnException {
@@ -28,7 +25,6 @@ public class Game {
         if(!player.equals(state.getCurrentPlayer())){
             throw new NotPlayersTurnException();
         }
-        moves.add(move);
         move.execute(player, this);
         checkForGameEnd();
         nextPlayersTurn();
@@ -63,8 +59,8 @@ public class Game {
         this.state.setNextPlayer(player);
     }
 
-    public List<Move> getMoves(){
-        return this.moves;
+    public Player getNextPlayer(){
+        return state.getNextPlayer();
     }
 
     public Player getCurrentPlayer(){
