@@ -16,13 +16,16 @@ import kalaha.mappers.KalahaMapper;
 import kalaha.mappers.PitMapper;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Required;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @CrossOrigin(origins = "http://localhost", maxAge=3600)
 @Controller
@@ -66,18 +69,20 @@ public class GameController {
         }
     }
 
-    @RequestMapping(value = "/sow", method = RequestMethod.POST)
+    @RequestMapping(value = "/sow", method = RequestMethod.POST, consumes = {MediaType.APPLICATION_JSON_VALUE} , produces={MediaType.APPLICATION_JSON_VALUE})
     @ResponseBody
-    public ResponseEntity sow(int playerIndex, int pitNumber,@RequestParam("game") String gameJson){
+    public ResponseEntity sow(@RequestBody Map<String, Object> json){
        try{
            setupModelMapper();
            ObjectMapper mapper = new ObjectMapper();
-           GameDto gameDto = mapper.readValue(gameJson, GameDto.class);
+           GameDto gameDto = mapper.readValue(json.get("game").toString(), GameDto.class);
            Game game = gameFactory.fromGameDto(gameDto);
+           int playerIndex = Integer.parseInt(json.get("playerIndex").toString());
            Player player = game.getPlayers().get(playerIndex);
            Check<DropStone> dropStoneCheck = new Check<>(new DropStoneRules());
            Check<CaptureOpponentsStones> captureOpponentsStonesCheck = new Check<>(new CaptureStonesRules());
            Check<TakeAnotherTurn> takeAnotherTurnCheck = new Check<>(new TakeAnotherTurnRules());
+           int pitNumber = Integer.parseInt( json.get("pitNumber").toString());
            Sow sow = new Sow(dropStoneCheck, captureOpponentsStonesCheck, takeAnotherTurnCheck, pitNumber);
            game = game.makeMove(player, sow);
            GameDto response = modelMapper.map(game, GameDto.class);
