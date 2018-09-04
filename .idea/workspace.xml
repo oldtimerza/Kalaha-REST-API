@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00af679f-9f14-4a02-8007-8c3b61567b44" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kalaha/controllers/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kalaha/controllers/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kalaha/dtos/GameDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kalaha/dtos/GameDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kalaha/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kalaha/game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kalaha/game/GameBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kalaha/game/GameBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kalaha/game/GameBoardFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kalaha/game/GameBoardFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kalaha/game/moves/Sow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kalaha/game/moves/Sow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kalaha/game/rules/CaptureStonesRules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kalaha/game/rules/CaptureStonesRules.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kalaha/game/rules/DropStoneRules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kalaha/game/rules/DropStoneRules.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kalaha/mappers/GameMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kalaha/mappers/GameMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/controllers/GameControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controllers/GameControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/kalaha/game/GameBoardFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/kalaha/game/GameBoardFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/kalaha/game/GameBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/kalaha/game/GameBoardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/kalaha/game/MovesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/kalaha/game/MovesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/kalaha/game/RulesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/kalaha/game/RulesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -29,15 +15,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GameController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/controllers/GameController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="87" column="81" selection-start-line="87" selection-start-column="81" selection-end-line="87" selection-end-column="81" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="GameMapper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/mappers/GameMapper.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -60,11 +37,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameBoard.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GameBoard.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/game/GameBoard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="43" selection-start-line="16" selection-end-line="17" selection-end-column="44" />
+            <state relative-caret-position="187">
+              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -154,7 +140,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/game/rules/CaptureStonesRules.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/moves/Sow.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/rules/TakeAnotherTurnRules.java" />
         <option value="$PROJECT_DIR$/src/test/java/game/MovesTest.java" />
@@ -205,6 +190,7 @@
         <option value="$PROJECT_DIR$/src/test/java/kalaha/game/RulesTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/mappers/MappersTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/kalaha/game/GameBoard.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -234,109 +220,6 @@
             <path>
               <item name="kalahabackend" type="b2602c69:ProjectViewProjectNode" />
               <item name="Backend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kalahabackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kalahabackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kalahabackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kalahabackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kalaha" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kalahabackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kalaha" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kalahabackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kalaha" type="462c0819:PsiDirectoryNode" />
-              <item name="dtos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kalahabackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kalaha" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kalahabackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kalaha" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
-              <item name="moves" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kalahabackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kalaha" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
-              <item name="rules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kalahabackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kalaha" type="462c0819:PsiDirectoryNode" />
-              <item name="mappers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kalahabackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kalahabackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kalahabackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mappers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -662,13 +545,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/game/NotPlayersTurnException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/game/Stone.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1115,8 +991,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/game/GameBoard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="43" selection-start-line="16" selection-end-line="17" selection-end-column="44" />
+        <state relative-caret-position="187">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
         </state>
       </provider>
     </entry>
