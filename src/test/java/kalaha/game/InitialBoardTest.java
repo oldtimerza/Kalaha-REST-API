@@ -8,15 +8,17 @@ import java.util.List;
 
 import static org.hamcrest.Matchers.equalTo;
 
-public class GameBoardFactoryTest {
+public class InitialBoardTest {
     @Test
-    public void shouldGetTheCorrectGameBoardConfig() throws Exception {
+    public void shouldCreateAnInitialBoardSetup() throws Exception {
         List<Player> players = new ArrayList<>();
         players.add(new Player(0));
         players.add(new Player(1));
-        GameBoardFactory factory = new GameBoardFactory();
-        GameState gameState = new GameState();
-        GameBoard gameBoard = factory.createInitialBoard(players);
+        InitialBoard builder = new InitialBoard();
+        builder.buildStones();
+        builder.buildPits(players);
+        builder.buildKalahas(players);
+        GameBoard gameBoard = builder.construct(players);
 
         Assert.assertThat(gameBoard.getKalahas().size(), equalTo(2));
         Assert.assertThat(gameBoard.getPits().size(), equalTo(14));
@@ -38,11 +40,6 @@ public class GameBoardFactoryTest {
         }
         kalaha = gameBoard.getKalahas().get(1);
         Assert.assertThat(players.get(1).getKalaha(), equalTo(kalaha));
-    }
-
-    @Test
-    public void shouldGetGameBoardFromDtos(){
-
     }
 
     private void assertKalaha(Kalaha kalaha, Player player){

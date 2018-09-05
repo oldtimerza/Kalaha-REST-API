@@ -1,7 +1,7 @@
 package controllers;
 
 import kalaha.controllers.GameController;
-import kalaha.game.GameBoardFactory;
+import kalaha.game.InitialBoard;
 import kalaha.game.GameState;
 import kalaha.mappers.GameMapper;
 import kalaha.mappers.KalahaMapper;
@@ -19,11 +19,9 @@ public class GameControllerTest {
     @Before
     public void init(){
         controller = new GameController();
-        controller.gameBoardFactory = new GameBoardFactory();
         controller.gameMapper = new GameMapper();
         controller.kalahaMapper = new KalahaMapper();
         controller.pitMapper = new PitMapper();
-        controller.gameState = new GameState();
     }
 
     @Test

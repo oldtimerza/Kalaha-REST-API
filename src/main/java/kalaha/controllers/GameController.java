@@ -16,15 +16,12 @@ import kalaha.mappers.KalahaMapper;
 import kalaha.mappers.PitMapper;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Required;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 @CrossOrigin(origins = "http://localhost", maxAge=3600)
@@ -33,15 +30,6 @@ import java.util.Map;
 public class GameController {
 
     ModelMapper modelMapper;
-
-    @Autowired
-    public GameFactory gameFactory;
-
-    @Autowired
-    public GameBoardFactory gameBoardFactory;
-
-    @Autowired
-    public GameState gameState;
 
     @Autowired
     public GameMapper gameMapper;
@@ -57,11 +45,12 @@ public class GameController {
     public ResponseEntity startGame(){
         try {
             setupModelMapper();
-            List<Player> players = new ArrayList<>();
-            players.add(new Player(0));
-            players.add(new Player(1));
-            GameBoard board = gameBoardFactory.createInitialBoard(players);
-            Game game = new Game(board, gameState, players);
+            BoardBuilder initialBoard = new InitialBoard();
+            GameBuilder gameBuilder = new InitialGame(initialBoard);
+            gameBuilder.buildPlayers();
+            gameBuilder.buildBoard();
+            gameBuilder.buildState();
+            Game game = gameBuilder.construct();
             GameDto response = modelMapper.map(game, GameDto.class);
             return ResponseEntity.ok(response);
         }catch(Exception e){
@@ -76,7 +65,12 @@ public class GameController {
            setupModelMapper();
            ObjectMapper mapper = new ObjectMapper();
            GameDto gameDto = mapper.readValue(json.get("game").toString(), GameDto.class);
-           Game game = gameFactory.fromGameDto(gameDto);
+           BoardBuilder boardBuilder = new DtoBoard(gameDto.pits, gameDto.kalahas);
+           GameBuilder gameBuilder = new DtoGame(gameDto, boardBuilder);
+           gameBuilder.buildPlayers();
+           gameBuilder.buildBoard();
+           gameBuilder.buildState();
+           Game game = gameBuilder.construct();
            int playerIndex = Integer.parseInt(json.get("playerIndex").toString());
            Player player = game.getPlayers().get(playerIndex);
            Check<DropStone> dropStoneCheck = new Check<>(new DropStoneRules());
