@@ -23,7 +23,7 @@ public class GameTest {
     Game game;
 
     @Before
-    public void init() throws Exception {
+    public void init(){
         players = new ArrayList<>();
         players.add(new Player(0));
         players.add(new Player(1));
