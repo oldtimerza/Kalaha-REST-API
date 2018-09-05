@@ -1,5 +1,9 @@
-package kalaha.game;
+package kalaha.game.builders;
 
+import kalaha.game.Game;
+import kalaha.game.GameState;
+import kalaha.game.Player;
+import kalaha.game.Status;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;

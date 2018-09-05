@@ -1,7 +1,8 @@
-package kalaha.game;
+package kalaha.game.builders;
 
 import kalaha.dtos.KalahaDto;
 import kalaha.dtos.PitDto;
+import kalaha.game.*;
 
 import java.util.ArrayList;
 import java.util.List;

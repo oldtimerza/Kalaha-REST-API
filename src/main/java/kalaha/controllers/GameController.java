@@ -3,6 +3,7 @@ package kalaha.controllers;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import kalaha.dtos.GameDto;
 import kalaha.game.*;
+import kalaha.game.builders.*;
 import kalaha.game.moves.CaptureOpponentsStones;
 import kalaha.game.moves.DropStone;
 import kalaha.game.moves.Sow;

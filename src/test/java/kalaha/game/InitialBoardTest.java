@@ -1,5 +1,6 @@
 package kalaha.game;
 
+import kalaha.game.builders.InitialBoard;
 import org.junit.Assert;
 import org.junit.Test;
 

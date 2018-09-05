@@ -1,6 +1,9 @@
-package kalaha.game;
+package kalaha.game.builders;
 
 import kalaha.dtos.GameDto;
+import kalaha.game.Game;
+import kalaha.game.GameState;
+import kalaha.game.Player;
 
 import java.util.ArrayList;
 

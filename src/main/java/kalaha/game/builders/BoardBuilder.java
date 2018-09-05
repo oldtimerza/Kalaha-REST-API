@@ -1,4 +1,6 @@
-package kalaha.game;
+package kalaha.game.builders;
+
+import kalaha.game.*;
 
 import java.util.List;
 

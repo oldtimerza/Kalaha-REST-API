@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="00af679f-9f14-4a02-8007-8c3b61567b44" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/data/sowResponse.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/controllers/GameControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controllers/GameControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/kalaha/game/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/kalaha/game/GameTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="00af679f-9f14-4a02-8007-8c3b61567b44" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,14 +46,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameControllerTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GameControllerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/controllers/GameControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
+            <state relative-caret-position="323">
+              <caret line="70" column="80" selection-start-line="70" selection-start-column="80" selection-end-line="70" selection-end-column="80" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#init#0;class#GameControllerTest#0" />
+                <element signature="method#shouldReturnInitialGameStateWhenStartIsCalled#0;class#GameControllerTest#0" />
+                <element signature="method#shouldReturnACorrectBoardStateAfterSowMoveMade#0;class#GameControllerTest#0" />
+                <element signature="method#readFile#0;class#GameControllerTest#0" />
+                <element signature="method#readJsonFromFile#0;class#GameControllerTest#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -209,90 +217,6 @@
               <item name="kalahabackend" type="b2602c69:ProjectViewProjectNode" />
               <item name="Backend" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="kalahabackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kalahabackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kalahabackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kalahabackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kalaha" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kalahabackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kalaha" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kalahabackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kalaha" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kalahabackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kalahabackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kalahabackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kalahabackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kalahabackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kalahabackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -328,7 +252,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in Backend">
+  <component name="RunManager" selected="Application.Application">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="kalaha.Application" />
       <module name="Backend" />
@@ -358,7 +282,7 @@
       <module name="Backend" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="kalaha.game.*" />
+          <option name="PATTERN" value="kalaha.game.builders.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -470,9 +394,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Application" />
         <item itemvalue="JUnit.All in Backend" />
         <item itemvalue="JUnit.GameControllerTest.shouldReturnInitialGameStateWhenStartIsCalled" />
-        <item itemvalue="Application.Application" />
         <item itemvalue="JUnit.GameControllerTest.shouldReturnACorrectBoardStateAfterSowMoveMade" />
         <item itemvalue="JUnit.GameBoardTest.shouldReturnTheCorrectPitGivenThePitNumber" />
       </list>
@@ -489,12 +413,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GameControllerTest_shouldReturnACorrectBoardStateAfterSowMoveMade - 2018.09.05 at 23h 41m 17s.xml">
-      <configuration name="GameControllerTest.shouldReturnACorrectBoardStateAfterSowMoveMade" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GameControllerTest_shouldReturnACorrectBoardStateAfterSowMoveMade - 2018.09.05 at 23h 43m 32s.xml">
-      <configuration name="GameControllerTest.shouldReturnACorrectBoardStateAfterSowMoveMade" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="GameControllerTest_shouldReturnACorrectBoardStateAfterSowMoveMade - 2018.09.05 at 23h 48m 41s.xml">
       <configuration name="GameControllerTest.shouldReturnACorrectBoardStateAfterSowMoveMade" configurationId="JUnit" />
     </history-entry>
@@ -518,6 +436,12 @@
     </history-entry>
     <history-entry file="GameControllerTest_shouldReturnACorrectBoardStateAfterSowMoveMade - 2018.09.06 at 00h 01m 26s.xml">
       <configuration name="GameControllerTest.shouldReturnACorrectBoardStateAfterSowMoveMade" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GameControllerTest_shouldReturnInitialGameStateWhenStartIsCalled - 2018.09.06 at 00h 03m 16s.xml">
+      <configuration name="GameControllerTest.shouldReturnInitialGameStateWhenStartIsCalled" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_Backend - 2018.09.06 at 00h 03m 33s.xml">
+      <configuration name="All in Backend" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -591,22 +515,10 @@
           <option name="timeStamp" value="110" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/controllers/GameControllerTest.java</url>
-          <line>72</line>
-          <properties />
-          <option name="timeStamp" value="113" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/kalaha/controllers/GameController.java</url>
           <line>64</line>
           <properties />
           <option name="timeStamp" value="114" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/controllers/GameControllerTest.java</url>
-          <line>52</line>
-          <properties />
-          <option name="timeStamp" value="116" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -765,13 +677,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -1036,11 +941,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/controllers/GameControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
+        <state relative-caret-position="323">
+          <caret line="70" column="80" selection-start-line="70" selection-start-column="80" selection-end-line="70" selection-end-column="80" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#init#0;class#GameControllerTest#0" />
+            <element signature="method#shouldReturnInitialGameStateWhenStartIsCalled#0;class#GameControllerTest#0" />
+            <element signature="method#shouldReturnACorrectBoardStateAfterSowMoveMade#0;class#GameControllerTest#0" />
+            <element signature="method#readFile#0;class#GameControllerTest#0" />
+            <element signature="method#readJsonFromFile#0;class#GameControllerTest#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
         </state>
       </provider>
     </entry>
