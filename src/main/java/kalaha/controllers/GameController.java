@@ -48,10 +48,8 @@ public class GameController {
             setupModelMapper();
             BoardBuilder initialBoard = new InitialBoard();
             GameBuilder gameBuilder = new InitialGame(initialBoard);
-            gameBuilder.buildPlayers();
-            gameBuilder.buildBoard();
-            gameBuilder.buildState();
-            Game game = gameBuilder.construct();
+            GameDirector director = new GameDirector(gameBuilder);
+            Game game = director.getGame();
             GameDto response = modelMapper.map(game, GameDto.class);
             return ResponseEntity.ok(response);
         }catch(Exception e){
@@ -65,27 +63,31 @@ public class GameController {
        try{
            setupModelMapper();
            ObjectMapper mapper = new ObjectMapper();
-           GameDto gameDto = mapper.readValue(json.get("game").toString(), GameDto.class);
+           String gameKey = "game";
+           GameDto gameDto = mapper.readValue(json.get(gameKey).toString(), GameDto.class);
+           String playerIndexKey = "playerIndex";
+           int playerIndex = Integer.parseInt(json.get(playerIndexKey).toString());
+           String pitNumberKey = "pitNumber";
+           int pitNumber = Integer.parseInt( json.get(pitNumberKey).toString());
+
            BoardBuilder boardBuilder = new DtoBoard(gameDto.pits, gameDto.kalahas);
            GameBuilder gameBuilder = new DtoGame(gameDto, boardBuilder);
-           gameBuilder.buildPlayers();
-           gameBuilder.buildBoard();
-           gameBuilder.buildState();
-           Game game = gameBuilder.construct();
-           int playerIndex = Integer.parseInt(json.get("playerIndex").toString());
+           GameDirector director = new GameDirector(gameBuilder);
+           Game game = director.getGame();
+
            Player player = game.getPlayers().get(playerIndex);
            Check<DropStone> dropStoneCheck = new Check<>(new DropStoneRules());
            Check<CaptureOpponentsStones> captureOpponentsStonesCheck = new Check<>(new CaptureStonesRules());
            Check<TakeAnotherTurn> takeAnotherTurnCheck = new Check<>(new TakeAnotherTurnRules());
-           int pitNumber = Integer.parseInt( json.get("pitNumber").toString());
            Sow sow = new Sow(dropStoneCheck, captureOpponentsStonesCheck, takeAnotherTurnCheck, pitNumber);
+
            game = game.makeMove(player, sow);
            GameDto response = modelMapper.map(game, GameDto.class);
            return ResponseEntity.ok(response);
        }catch(Exception e){
-           return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+           return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR ).body(e.getMessage());
        } catch (NotPlayersTurnException e) {
-           return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+           return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR ).body(e.getMessage());
        }
     }
 

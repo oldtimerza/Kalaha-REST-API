@@ -9,8 +9,8 @@ public abstract class BoardBuilder {
     protected List<Stone> stones;
     protected List<Kalaha> kalahas;
 
-    public abstract void buildPits(List<Player> player);
-    public abstract void buildKalahas(List<Player> player);
+    public abstract void buildPits(List<Player> players);
+    public abstract void buildKalahas(List<Player> players);
     public abstract void buildStones();
-    public abstract GameBoard construct(List<Player> player) throws Exception;
+    public abstract GameBoard construct(List<Player> players) throws Exception;
 }
