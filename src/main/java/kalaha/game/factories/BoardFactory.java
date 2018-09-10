@@ -4,6 +4,6 @@ import kalaha.game.*;
 
 import java.util.List;
 
-public abstract class BoardFactory {
-    public abstract GameBoard createBoard(List<Player> players) throws Exception;
+public interface BoardFactory {
+    GameBoard createBoard(List<Player> players) throws Exception;
 }

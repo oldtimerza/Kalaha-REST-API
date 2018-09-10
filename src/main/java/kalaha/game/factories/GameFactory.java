@@ -4,6 +4,6 @@ import kalaha.game.Game;
 import org.springframework.stereotype.Component;
 
 @Component
-public abstract class GameFactory {
-    public abstract Game createGame() throws Exception;
+public interface GameFactory {
+    Game createGame() throws Exception;
 }

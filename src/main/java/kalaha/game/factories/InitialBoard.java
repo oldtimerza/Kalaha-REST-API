@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class InitialBoard extends BoardFactory {
+public class InitialBoard implements BoardFactory {
     @Override
     public GameBoard createBoard(List<Player> players) throws Exception {
         List<Pit> pits = new ArrayList<>();
