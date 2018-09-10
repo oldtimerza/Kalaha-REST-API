@@ -1,6 +1,6 @@
 package mappers;
 
-import kalaha.dtos.GameDto;
+import kalaha.dtos.GameJson;
 import kalaha.game.*;
 import kalaha.mappers.GameMapper;
 import kalaha.mappers.KalahaMapper;
@@ -47,7 +47,7 @@ public class MappersTest {
         state.setNextPlayer(nextPlayer);
         Game game = new Game(gameBoard, state, players);
 
-        GameDto dto = mapper.map(game, GameDto.class);
+        GameJson dto = mapper.map(game, GameJson.class);
         Assert.assertThat(dto.currentPlayerIndex, Matchers.equalTo(playerIndex));
         Assert.assertThat(dto.nextPlayerIndex, Matchers.equalTo(nextPlayerIndex));
         Assert.assertThat(dto.numberOfPlayers, Matchers.equalTo(2));

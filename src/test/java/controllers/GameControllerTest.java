@@ -4,9 +4,11 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.http.ContentType;
 import kalaha.controllers.GameController;
-import kalaha.mappers.GameMapper;
-import kalaha.mappers.KalahaMapper;
-import kalaha.mappers.PitMapper;
+import kalaha.game.factories.*;
+import kalaha.game.rules.CaptureStonesRules;
+import kalaha.game.rules.DropStoneRules;
+import kalaha.game.rules.TakeAnotherTurnRules;
+import kalaha.services.GameService;
 import org.hamcrest.Matchers;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,13 +24,25 @@ import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
 public class GameControllerTest {
 
     GameController controller;
+    GameService gameService;
 
     @Before
     public void init(){
+        gameService = new GameService();
+        gameService.setCaptureStonesRules(new CaptureStonesRules());
+        gameService.setDropStoneRules(new DropStoneRules());
+        gameService.setGameFromRequest(new GameFromRequest());
+        gameService.setTakeAnotherTurnRules(new TakeAnotherTurnRules());
+        InitialGame initialGame = new InitialGame();
+        InitialBoard initialBoard = new InitialBoard();
+        initialGame.setBoardFactory(initialBoard);
+        gameService.setInitialGame(initialGame);
+        BoardFromRequest boardFromRequest = new BoardFromRequest();
+        GameFromRequest gameFromRequest = new GameFromRequest();
+        gameFromRequest.setReconstructBoard(boardFromRequest);
+        gameService.setGameFromRequest(gameFromRequest);
         controller = new GameController();
-        controller.gameMapper = new GameMapper();
-        controller.kalahaMapper = new KalahaMapper();
-        controller.pitMapper = new PitMapper();
+        controller.gameService = gameService;
     }
 
     @Test

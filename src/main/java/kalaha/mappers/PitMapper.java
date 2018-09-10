@@ -1,14 +1,14 @@
 package kalaha.mappers;
 
-import kalaha.dtos.PitDto;
+import kalaha.dtos.PitJson;
 import kalaha.game.Pit;
 import org.modelmapper.PropertyMap;
 import org.springframework.stereotype.Component;
 
 @Component
 public class PitMapper {
-    public PropertyMap<Pit, PitDto> map(){
-        return new PropertyMap<Pit, PitDto>() {
+    public PropertyMap<Pit, PitJson> map(){
+        return new PropertyMap<Pit, PitJson>() {
             @Override
             protected void configure() {
                 map(source.getNumber(), destination.pitNumber);

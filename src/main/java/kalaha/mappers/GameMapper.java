@@ -1,14 +1,14 @@
 package kalaha.mappers;
 
-import kalaha.dtos.GameDto;
+import kalaha.dtos.GameJson;
 import kalaha.game.Game;
 import org.modelmapper.PropertyMap;
 import org.springframework.stereotype.Component;
 
 @Component
 public class GameMapper {
-    public PropertyMap<Game, GameDto> map(){
-       return new PropertyMap<Game, GameDto>() {
+    public PropertyMap<Game, GameJson> map(){
+       return new PropertyMap<Game, GameJson>() {
            @Override
            protected void configure() {
                map(source.getCurrentPlayer().getIndex(), destination.currentPlayerIndex);

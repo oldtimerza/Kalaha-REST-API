@@ -37,7 +37,6 @@ public class RulesTest {
     @Test
     public void shouldExecuteDropStoneIfNotDroppingIntoOpponentKalaha(){
         List<Kalaha> kalahas = new ArrayList<>();
-        Player player = Mockito.mock(Player.class);
         Pit pit = new Pit(null, players.get(0), 0);
         Kalaha kalaha = new Kalaha(pit);
         kalahas.add(kalaha);

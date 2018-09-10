@@ -1,6 +1,6 @@
 package kalaha.game;
 
-import kalaha.game.builders.InitialBoard;
+import kalaha.game.factories.InitialBoard;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -16,10 +16,7 @@ public class InitialBoardTest {
         players.add(new Player(0));
         players.add(new Player(1));
         InitialBoard builder = new InitialBoard();
-        builder.buildStones();
-        builder.buildPits(players);
-        builder.buildKalahas(players);
-        GameBoard gameBoard = builder.construct(players);
+        GameBoard gameBoard = builder.createBoard(players);
 
         Assert.assertThat(gameBoard.getKalahas().size(), equalTo(2));
         Assert.assertThat(gameBoard.getPits().size(), equalTo(14));

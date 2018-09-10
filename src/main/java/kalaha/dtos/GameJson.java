@@ -4,11 +4,11 @@ import kalaha.game.Status;
 
 import java.util.List;
 
-public class GameDto {
+public class GameJson {
     public int currentPlayerIndex;
     public int nextPlayerIndex;
     public int numberOfPlayers;
-    public List<KalahaDto> kalahas;
-    public List<PitDto> pits;
+    public List<KalahaJson> kalahas;
+    public List<PitJson> pits;
     public Status status;
 }

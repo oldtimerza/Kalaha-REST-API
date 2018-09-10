@@ -1,5 +1,5 @@
 package kalaha.dtos;
 
-public class KalahaDto {
+public class KalahaJson {
     public int pitNumber;
 }

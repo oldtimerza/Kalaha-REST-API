@@ -1,4 +1,4 @@
-package kalaha.game.builders;
+package kalaha.game.factories;
 
 import kalaha.game.*;
 import org.springframework.stereotype.Component;
@@ -7,33 +7,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class InitialBoard extends BoardBuilder {
+public class InitialBoard extends BoardFactory {
     @Override
-    public void buildPits(List<Player> players) {
-        this.pits = new ArrayList<>();
-    }
-
-    @Override
-    public void buildKalahas(List<Player> players) {
-        this.kalahas = new ArrayList<>();
-    }
-
-    @Override
-    public void buildStones() {
-        List<Stone> stones = new ArrayList<>();
-        for(int i=0; i < 6; i++){
-            stones.add(new Stone());
-        }
-        this.stones = stones;
-    }
-
-    @Override
-    public GameBoard construct(List<Player> players) throws Exception {
+    public GameBoard createBoard(List<Player> players) throws Exception {
+        List<Pit> pits = new ArrayList<>();
+        List<Kalaha> kalahas = new ArrayList<>();
         if(players.size() < 2){
             throw new Exception("Please include 2 players");
         }
-        setupPlayerBoard(pits, kalahas, stones, players.get(0));
-        setupPlayerBoard(pits, kalahas, stones, players.get(1));
+        setupPlayerBoard(pits, kalahas, players.get(0));
+        setupPlayerBoard(pits, kalahas, players.get(1));
         players.get(0).getKalaha().getPit().setNextPit(players.get(1).getPits().get(0));
         players.get(1).getKalaha().getPit().setNextPit(players.get(0).getPits().get(0));
         GameBoard board = new GameBoard(pits, kalahas);
@@ -41,7 +24,11 @@ public class InitialBoard extends BoardBuilder {
     }
 
 
-    private void setupPlayerBoard(List<Pit> pits, List<Kalaha> kalahas, List<Stone> stones, Player player) {
+    private void setupPlayerBoard(List<Pit> pits, List<Kalaha> kalahas, Player player) {
+        List<Stone> stones = new ArrayList<>();
+        for(int i=0; i < 6; i++){
+            stones.add(new Stone());
+        }
         for(int i = 0; i < 6; i ++ ) {
             Pit pit = new Pit(new ArrayList<>(stones), player, pits.size() + 1);
             if(i > 0) {
