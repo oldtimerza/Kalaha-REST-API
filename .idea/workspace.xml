@@ -2,33 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00af679f-9f14-4a02-8007-8c3b61567b44" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/kalaha/game/factories/BoardFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/kalaha/game/factories/BoardFromRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/kalaha/game/factories/GameFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/kalaha/game/factories/GameFromRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/kalaha/game/factories/InitialGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/kalaha/controllers/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kalaha/controllers/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kalaha/dtos/GameDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kalaha/dtos/GameJson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kalaha/dtos/KalahaDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kalaha/dtos/KalahaJson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kalaha/dtos/PitDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kalaha/dtos/PitJson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kalaha/game/builders/BoardBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kalaha/game/builders/BoardDirector.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kalaha/game/builders/DtoBoard.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kalaha/game/builders/DtoGame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kalaha/game/builders/GameBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kalaha/game/builders/GameDirector.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kalaha/game/builders/InitialBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kalaha/game/factories/InitialBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kalaha/game/builders/InitialGame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kalaha/mappers/GameMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kalaha/mappers/GameMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kalaha/mappers/KalahaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kalaha/mappers/KalahaMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kalaha/mappers/PitMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kalaha/mappers/PitMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/controllers/GameControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controllers/GameControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/kalaha/game/BoardDirectorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/kalaha/game/GameDirectorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/kalaha/game/InitialBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/kalaha/game/InitialBoardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/kalaha/game/RulesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/kalaha/game/RulesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mappers/MappersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mappers/MappersTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kalaha/game/rules/CaptureStonesRules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kalaha/game/rules/CaptureStonesRules.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kalaha/game/rules/DropStoneRules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kalaha/game/rules/DropStoneRules.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kalaha/game/rules/TakeAnotherTurnRules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kalaha/game/rules/TakeAnotherTurnRules.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kalaha/services/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kalaha/services/GameService.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -41,11 +19,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GameController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GameController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/controllers/GameController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="40" selection-start-line="40" selection-end-line="40" />
+            <state relative-caret-position="323">
+              <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameJson.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/dtos/GameJson.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KalahaJson.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/dtos/KalahaJson.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PitJson.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/dtos/PitJson.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NotPlayersTurnException.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/game/NotPlayersTurnException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="e#115#116#0" expanded="true" />
+                <element signature="e#135#136#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -53,8 +74,8 @@
       <file leaf-file-name="GameService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/services/GameService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="36" column="40" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
+            <state relative-caret-position="48">
+              <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1755#1756#0" expanded="true" />
@@ -68,90 +89,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReconstructGame.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/game/factories/ReconstructGame.java">
+      <file leaf-file-name="CaptureStonesRules.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/game/rules/CaptureStonesRules.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/kalaha/game/GameTest.java">
+      <file leaf-file-name="DropStoneRules.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/game/rules/DropStoneRules.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+            <state relative-caret-position="68">
+              <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameFromRequest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/game/factories/GameFromRequest.java">
+      <file leaf-file-name="TakeAnotherTurnRules.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/game/rules/TakeAnotherTurnRules.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1140#1141#0" expanded="true" />
-                <element signature="e#1196#1197#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InitialBoardTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/kalaha/game/InitialBoardTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InitialGame.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/game/factories/InitialGame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#942#943#0" expanded="true" />
-                <element signature="e#990#991#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameControllerTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GameControllerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/controllers/GameControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="63" column="35" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InitialBoard.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/game/factories/InitialBoard.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state relative-caret-position="544">
+              <caret line="32" column="59" selection-start-line="32" selection-start-column="59" selection-end-line="32" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/game/factories/GameFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -172,11 +144,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/kalaha/game/rules/TakeAnotherTurnRules.java" />
-        <option value="$PROJECT_DIR$/src/main/java/kalaha/game/rules/CaptureStonesRules.java" />
-        <option value="$PROJECT_DIR$/src/test/java/mappers/GameMapperTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/kalaha/mappers/GameMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/kalaha/game/rules/DropStoneRules.java" />
         <option value="$PROJECT_DIR$/src/test/java/mappers/MappersTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/kalaha/game/GameBoard.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -216,13 +184,17 @@
         <option value="$PROJECT_DIR$/src/main/java/kalaha/game/builders/InitialGame.java" />
         <option value="$PROJECT_DIR$/src/main/java/kalaha/game/builders/ReconstructGame.java" />
         <option value="$PROJECT_DIR$/src/main/java/kalaha/game/builders/ReconstructBoard.java" />
-        <option value="$PROJECT_DIR$/src/main/java/kalaha/controllers/GameController.java" />
         <option value="$PROJECT_DIR$/src/main/java/kalaha/game/factories/BoardFactory.java" />
         <option value="$PROJECT_DIR$/src/test/java/kalaha/game/InitialBoardTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/kalaha/services/GameService.java" />
         <option value="$PROJECT_DIR$/src/main/java/kalaha/game/factories/InitialGame.java" />
         <option value="$PROJECT_DIR$/src/main/java/kalaha/game/factories/GameFromRequest.java" />
         <option value="$PROJECT_DIR$/src/test/java/controllers/GameControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/kalaha/game/NotPlayersTurnException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/kalaha/services/GameService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/kalaha/game/rules/CaptureStonesRules.java" />
+        <option value="$PROJECT_DIR$/src/main/java/kalaha/game/rules/DropStoneRules.java" />
+        <option value="$PROJECT_DIR$/src/main/java/kalaha/game/rules/TakeAnotherTurnRules.java" />
+        <option value="$PROJECT_DIR$/src/main/java/kalaha/controllers/GameController.java" />
       </list>
     </option>
   </component>
@@ -296,26 +268,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="kalaha" type="462c0819:PsiDirectoryNode" />
-              <item name="dtos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kalahabackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kalaha" type="462c0819:PsiDirectoryNode" />
               <item name="game" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kalahabackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kalaha" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
-              <item name="factories" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kalahabackend" type="b2602c69:ProjectViewProjectNode" />
@@ -428,7 +381,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in Backend">
+  <component name="RunManager" selected="Application.Application">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="kalaha.Application" />
       <module name="Backend" />
@@ -570,11 +523,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Application" />
         <item itemvalue="JUnit.All in Backend" />
         <item itemvalue="JUnit.GameControllerTest" />
         <item itemvalue="JUnit.GameControllerTest.shouldReturnACorrectBoardStateAfterSowMoveMade" />
         <item itemvalue="JUnit.GameControllerTest.shouldReturnInitialGameStateWhenStartIsCalled" />
-        <item itemvalue="Application.Application" />
       </list>
     </recent_temporary>
   </component>
@@ -589,18 +542,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GameControllerTest_shouldReturnInitialGameStateWhenStartIsCalled - 2018.09.10 at 22h 33m 29s.xml">
-      <configuration name="GameControllerTest.shouldReturnInitialGameStateWhenStartIsCalled" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GameControllerTest - 2018.09.10 at 22h 39m 08s.xml">
-      <configuration name="GameControllerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GameControllerTest_shouldReturnInitialGameStateWhenStartIsCalled - 2018.09.10 at 22h 40m 04s.xml">
-      <configuration name="GameControllerTest.shouldReturnInitialGameStateWhenStartIsCalled" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GameControllerTest_shouldReturnInitialGameStateWhenStartIsCalled - 2018.09.10 at 22h 43m 09s.xml">
-      <configuration name="GameControllerTest.shouldReturnInitialGameStateWhenStartIsCalled" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="GameControllerTest_shouldReturnACorrectBoardStateAfterSowMoveMade - 2018.09.10 at 22h 43m 19s.xml">
       <configuration name="GameControllerTest.shouldReturnACorrectBoardStateAfterSowMoveMade" configurationId="JUnit" />
     </history-entry>
@@ -619,9 +560,22 @@
     <history-entry file="GameControllerTest_shouldReturnACorrectBoardStateAfterSowMoveMade - 2018.09.10 at 22h 46m 31s.xml">
       <configuration name="GameControllerTest.shouldReturnACorrectBoardStateAfterSowMoveMade" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="GameControllerTest_shouldReturnACorrectBoardStateAfterSowMoveMade - 2018.09.10 at 22h 47m 07s.xml">
+      <configuration name="GameControllerTest.shouldReturnACorrectBoardStateAfterSowMoveMade" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GameControllerTest - 2018.09.10 at 22h 49m 40s.xml">
+      <configuration name="GameControllerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_Backend - 2018.09.10 at 22h 49m 48s.xml">
+      <configuration name="All in Backend" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_Backend - 2018.09.10 at 22h 54m 57s.xml">
+      <configuration name="All in Backend" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1874" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -632,7 +586,7 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32925585" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32925585" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32925585" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -642,7 +596,7 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39959225" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39959225" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -658,26 +612,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/kalaha/controllers/GameController.java</url>
-          <line>28</line>
-          <properties />
-          <option name="timeStamp" value="119" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/kalaha/game/factories/InitialGame.java</url>
           <line>17</line>
           <properties />
           <option name="timeStamp" value="120" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/kalaha/controllers/GameController.java</url>
-          <line>40</line>
-          <properties />
-          <option name="timeStamp" value="121" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/kalaha/services/GameService.java</url>
-          <line>36</line>
+          <line>38</line>
           <properties />
           <option name="timeStamp" value="122" />
         </line-breakpoint>
@@ -687,11 +629,17 @@
           <properties />
           <option name="timeStamp" value="123" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/kalaha/controllers/GameController.java</url>
+          <line>27</line>
+          <properties />
+          <option name="timeStamp" value="124" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="124" />
+      <option name="time" value="125" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -717,13 +665,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/game/Kalaha.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/game/NotPlayersTurnException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
@@ -794,13 +735,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/mappers/MappersTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/game/moves/DropStone.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -840,13 +774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/game/rules/DropStoneRules.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
@@ -895,41 +822,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/game/rules/TakeAnotherTurnRules.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/game/rules/CaptureStonesRules.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/dtos/GameJson.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/dtos/KalahaJson.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/dtos/PitJson.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1007,29 +899,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/controllers/GameController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/services/GameService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="36" column="40" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1755#1756#0" expanded="true" />
-            <element signature="e#1807#1808#0" expanded="true" />
-            <element signature="e#2187#2188#0" expanded="true" />
-            <element signature="e#2233#2234#0" expanded="true" />
-            <element signature="e#2304#2305#0" expanded="true" />
-            <element signature="e#2358#2359#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/game/factories/ReconstructGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1042,8 +911,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/game/factories/GameFromRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="306">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1140#1141#0" expanded="true" />
@@ -1052,10 +921,99 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/mappers/MappersTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/controllers/GameControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="63" column="35" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
+        <state relative-caret-position="544">
+          <caret line="32" column="59" selection-start-line="32" selection-start-column="59" selection-end-line="32" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/game/NotPlayersTurnException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#115#116#0" expanded="true" />
+            <element signature="e#135#136#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/dtos/GameJson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/dtos/KalahaJson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/dtos/PitJson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/services/GameService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1755#1756#0" expanded="true" />
+            <element signature="e#1807#1808#0" expanded="true" />
+            <element signature="e#2187#2188#0" expanded="true" />
+            <element signature="e#2233#2234#0" expanded="true" />
+            <element signature="e#2304#2305#0" expanded="true" />
+            <element signature="e#2358#2359#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/game/rules/CaptureStonesRules.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/game/rules/DropStoneRules.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/game/rules/TakeAnotherTurnRules.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kalaha/controllers/GameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

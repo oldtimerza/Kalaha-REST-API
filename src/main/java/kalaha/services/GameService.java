@@ -15,7 +15,9 @@ import kalaha.game.rules.Check;
 import kalaha.game.rules.DropStoneRules;
 import kalaha.game.rules.TakeAnotherTurnRules;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class GameService {
 
     private DropStoneRules dropStoneRules;

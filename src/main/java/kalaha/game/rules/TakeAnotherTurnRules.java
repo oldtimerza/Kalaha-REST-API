@@ -4,7 +4,9 @@ import kalaha.game.Game;
 import kalaha.game.Pit;
 import kalaha.game.Player;
 import kalaha.game.moves.TakeAnotherTurn;
+import org.springframework.stereotype.Component;
 
+@Component
 public class TakeAnotherTurnRules implements Rules<TakeAnotherTurn> {
     @Override
     public Affirmation validate(TakeAnotherTurn move, Game game, Player player) {

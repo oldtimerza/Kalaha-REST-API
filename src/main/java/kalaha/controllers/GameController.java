@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
-@CrossOrigin(origins = "http://localhost", maxAge=3600)
+@CrossOrigin(value="http://localhost", maxAge = 3600)
 @Controller
 @RequestMapping("/game")
 public class GameController {
@@ -23,7 +23,6 @@ public class GameController {
     public GameService gameService;
 
     @RequestMapping(value = "/start", method = RequestMethod.GET)
-    @ResponseBody
     public ResponseEntity startGame() {
         try {
             Game game = gameService.start();
@@ -35,7 +34,6 @@ public class GameController {
     }
 
     @RequestMapping(value = "/sow", method = RequestMethod.POST, consumes = {MediaType.APPLICATION_JSON_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE})
-    @ResponseBody
     public ResponseEntity sow(@RequestBody Map<String, Object> json) {
         try {
             ObjectMapper mapper = new ObjectMapper();

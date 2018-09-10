@@ -2,7 +2,9 @@ package kalaha.game.rules;
 
 import kalaha.game.*;
 import kalaha.game.moves.DropStone;
+import org.springframework.stereotype.Component;
 
+@Component
 public class DropStoneRules implements Rules<DropStone> {
     @Override
     public Affirmation validate(DropStone move, Game game, Player player) {
