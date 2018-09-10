@@ -8,3 +8,5 @@ If you need to practice as well, or have any suggestions for improvements then p
 Much appreciated :)
 
 kthxbai
+
+PS: The frontend can be found here: https://github.com/oldtimerza/kalaha-frontend
